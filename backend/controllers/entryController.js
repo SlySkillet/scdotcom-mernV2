@@ -1,9 +1,11 @@
 const asyncHandler = require("express-async-handler");
+const Entry = require("../models/entryModel");
 
 // @desc get all blog entries
 // @route GET /api/entries
 const getEntries = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: "Get entries suhn" });
+  const entries = await Entry.find();
+  res.status(200).json(entries);
 });
 
 // @desc  create new entry
@@ -14,7 +16,11 @@ const postEntry = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error("please add text field");
   }
-  res.status(200).json({ message: "Create a new entry" });
+  const entry = await Entry.create({
+    text: req.body.text,
+  });
+
+  res.status(200).json(entry);
 });
 
 // @desc update entry
