@@ -12,12 +12,18 @@ const getEntries = asyncHandler(async (req, res) => {
 // @route POST /api/entries
 const postEntry = asyncHandler(async (req, res) => {
   console.log(req.body);
-  if (!req.body.text) {
+  if (!req.body.title) {
     res.status(400);
     throw new Error("please add text field");
   }
   const entry = await Entry.create({
-    text: req.body.text,
+    title: req.body.title,
+    subject: req.body.subject,
+    date: req.body.date,
+    image: req.body.image,
+    entryBody: req.body.entryBody,
+    links: req.body.links,
+    tags: req.body.tags,
   });
 
   res.status(200).json(entry);
