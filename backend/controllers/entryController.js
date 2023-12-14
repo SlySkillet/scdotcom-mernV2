@@ -26,13 +26,32 @@ const postEntry = asyncHandler(async (req, res) => {
 // @desc update entry
 // @route PUT /api/entries/:id
 const updateEntry = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: `Update entry # ${req.params.id}` });
+  const entry = await Entry.findById(req.params.id);
+
+  if (!entry) {
+    res.status(400);
+    throw new Error("entry not found");
+  }
+
+  const updatedEntry = await Entry.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
+  res.status(200).json(updatedEntry);
 });
 
 // @desc delete entry
 // @route DELETE /api/entries/:id
 const deleteEntry = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: `Delete entry # ${req.params.id}` });
+  const entry = await Entry.findById(req.params.id);
+
+  if (!entry) {
+    res.status(400);
+    throw new Error("entry not found - entry not deleted");
+  }
+
+  await entry.deleteOne();
+
+  res.status(200).json({ id: req.params.id });
 });
 
 module.exports = {
