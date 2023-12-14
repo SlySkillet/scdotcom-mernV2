@@ -1,20 +1,9 @@
 const express = require('express')
 const router = express.Router()
+const { getEntries, postEntry, updateEntry, deleteEntry } = require('../controllers/entryController')
 
-router.get('/', (req, res) => {
-    res.status(200).json({message: "Get entries suhn"})
-})
+router.route('/').get(getEntries).post(postEntry)
 
-router.post('/', (req, res) => {
-    res.status(200).json({message: "Create a new entry"})
-})
-
-router.put('/:id', (req, res) => {
-    res.status(200).json({message: `Update entry # ${req.params.id}`})
-})
-
-router.delete('/:id', (req, res) => {
-    res.status(200).json({message: `delete entry # ${req.params.id}`})
-})
+router.route('/:id').put(updateEntry).delete(deleteEntry)
 
 module.exports = router
