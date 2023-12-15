@@ -25,7 +25,14 @@ function Blog() {
     <div>
       <div>Blodge</div>
       <table>
-        <tr>table</tr>
+        <thead>
+          <tr>id</tr>
+        </thead>
+        <tbody>
+          {entries.map((entryIterable, idx) => {
+            return <tr key={idx}>{entryIterable._id}</tr>;
+          })}
+        </tbody>
       </table>
     </div>
   );
