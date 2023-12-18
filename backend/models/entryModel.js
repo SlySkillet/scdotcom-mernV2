@@ -18,7 +18,7 @@ const entrySchema = mongoose.Schema(
       required: false,
     },
     entryBody: {
-      type: Array,
+      type: Object,
       required: [true, "please add entry body"],
     },
     links: {

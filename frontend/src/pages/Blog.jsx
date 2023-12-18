@@ -21,16 +21,40 @@ function Blog() {
   }, []);
   console.log(entries);
 
+  // function that takes in an array and returns formatted paragraph.
+  const arrayToP = function (inputArray) {
+    let str = "";
+    for (let i of inputArray) {
+      console.log(i);
+      if (typeof i === "object") {
+        console.log("butthole");
+        str += i[0];
+      } else {
+        str += i;
+      }
+      str += " ";
+    }
+    return str;
+  };
+
   return (
     <div>
       <div>Blodge</div>
       <table>
         <thead>
-          <tr>id</tr>
+          <tr>
+            <td>id</td>
+            <td>body</td>
+          </tr>
         </thead>
         <tbody>
           {entries.map((entryIterable, idx) => {
-            return <tr key={idx}>{entryIterable._id}</tr>;
+            return (
+              <tr key={idx}>
+                <td>{entryIterable._id}</td>
+                <td>{arrayToP(Object.values(entryIterable.entryBody))}</td>
+              </tr>
+            );
           })}
         </tbody>
       </table>
