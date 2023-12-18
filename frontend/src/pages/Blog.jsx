@@ -19,45 +19,67 @@ function Blog() {
     }
     loadEntries();
   }, []);
-  console.log(entries);
 
   // function that takes in an array and returns formatted paragraph.
   const arrayToP = function (inputArray) {
-    let str = "";
+    let bodyParagraphs = [];
     for (let i of inputArray) {
-      console.log(i);
-      if (typeof i === "object") {
-        console.log("butthole");
-        str += i[0];
-      } else {
-        str += i;
+      let str = "";
+      for (let j of Object.values(i)) {
+        if (typeof j === "object") {
+          str += j[0];
+        } else {
+          str += j;
+        }
+        str += " ";
       }
-      str += " ";
+      bodyParagraphs.push(str);
     }
-    return str;
+    console.log(bodyParagraphs);
+    return bodyParagraphs;
+  };
+
+  // function to write paragraph for p in bodyParagraphs
+  const bodyParagraphToJSX = function (bodyParagraphs) {
+    return (
+      <div>
+        {bodyParagraphs.map((p, idx) => {
+          return <p key={idx}>{p}</p>;
+        })}
+      </div>
+    );
   };
 
   return (
     <div>
       <div>Blodge</div>
-      <table>
-        <thead>
-          <tr>
-            <td>id</td>
-            <td>body</td>
-          </tr>
-        </thead>
-        <tbody>
-          {entries.map((entryIterable, idx) => {
-            return (
-              <tr key={idx}>
-                <td>{entryIterable._id}</td>
-                <td>{arrayToP(Object.values(entryIterable.entryBody))}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div>
+        {entries.map((entryIterable, idx) => {
+          return (
+            <div key={idx}>
+              {/* date */}
+              <p>
+                {entryIterable.date
+                  ? entryIterable.date
+                  : entryIterable.createdAt}
+              </p>
+
+              {/* title */}
+              <p>{entryIterable.title}</p>
+
+              {/* image */}
+              <p>{entryIterable.image ? entryIterable.image : null}</p>
+
+              {/* entry body */}
+              <p>
+                {bodyParagraphToJSX(
+                  arrayToP(Object.values(entryIterable.entryBody)),
+                )}
+              </p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
