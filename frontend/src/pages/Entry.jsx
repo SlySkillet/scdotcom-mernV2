@@ -71,6 +71,20 @@ Link once that portion of the application is running.
                 parseEntryBody(Object.values(entry.entryBody)),
               )}
             </div>
+            <ui>
+              {entry.links.map((link, i) => {
+                return (
+                  <li>
+                    <a href={link[1]}>{link[0]}</a>
+                  </li>
+                );
+              })}
+            </ui>
+            <p>
+              {entry.tags.map((tag, i) => {
+                return tag + " ";
+              })}
+            </p>
           </div>
         );
       })}
