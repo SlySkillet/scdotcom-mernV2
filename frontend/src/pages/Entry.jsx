@@ -81,8 +81,13 @@ Link once that portion of the application is running.
               })}
             </ui>
             <p>
+              {"# "}
               {entry.tags.map((tag, i) => {
-                return tag + " ";
+                if (i < entry.tags.length - 1) {
+                  return tag + ", ";
+                } else {
+                  return tag;
+                }
               })}
             </p>
           </div>
