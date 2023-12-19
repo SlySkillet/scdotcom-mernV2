@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const Entry = function () {
@@ -30,24 +30,51 @@ const Entry = function () {
     return parsedObj;
   };
 
-  const parsedEntryBodyToJSX = function (input) {
-    const objectOrP = function (x) {
-      //   typeof x === "object" ? <Link>{x[0]}</Link> : <p>x</p>;
-      if (typeof x == "string") {
-        return <p key={x}>{x}</p>;
-      } else {
-        return <a href={x[1]}>{x[0]}</a>;
-      }
-    };
-    console.log("input", input[0]);
+  //   const parsedEntryBodyToJSX = function (input) {
+  //     const objectOrP = function (x) {
+  //       //   typeof x === "object" ? <Link>{x[0]}</Link> : <p>x</p>;
+  //       if (typeof x == "string") {
+  //         return <p key={x}>{x}</p>;
+  //       } else {
+  //         return <a href={x[1]}>{x[0]}</a>;
+  //       }
+  //     };
+  //     console.log("input", input[0]);
+  //     return (
+  //       <div>
+  //         {input[0].map((iter, i) => {
+  //           return objectOrP(iter);
+  //         })}
+  //       </div>
+  //     );
+  //   };
+  const parsedEntryBodyToJSX = function (entryBody) {
     return (
       <div>
-        {input[0].map((iter, i) => {
-          return objectOrP(iter);
-        })}
+        {Object.values(entryBody).map((paragraph, i) => (
+          <div key={i}>
+            {Object.values(paragraph).map((item, j) => (
+              <Fragment key={j}>
+                {typeof item === "string" ? (
+                  <p key={j}>{item}</p>
+                ) : (
+                  <a key={j} href={item[1]}>
+                    {item[0]}
+                  </a>
+                )}
+              </Fragment>
+            ))}
+          </div>
+        ))}
       </div>
     );
   };
+
+  /*
+line 51 is using a tags because links go nowhere and react
+router has not been set up yet. They should be replaced with
+Link once that portion of the application is running.
+*/
 
   return (
     <div>
