@@ -30,42 +30,24 @@ const Entry = function () {
     return parsedObj;
   };
 
-  //   const parsedEntryBodyToJSX = function (input) {
-  //     const objectOrP = function (x) {
-  //       //   typeof x === "object" ? <Link>{x[0]}</Link> : <p>x</p>;
-  //       if (typeof x == "string") {
-  //         return <p key={x}>{x}</p>;
-  //       } else {
-  //         return <a href={x[1]}>{x[0]}</a>;
-  //       }
-  //     };
-  //     console.log("input", input[0]);
-  //     return (
-  //       <div>
-  //         {input[0].map((iter, i) => {
-  //           return objectOrP(iter);
-  //         })}
-  //       </div>
-  //     );
-  //   };
   const parsedEntryBodyToJSX = function (entryBody) {
     return (
       <div>
-        {Object.values(entryBody).map((paragraph, i) => (
-          <div key={i}>
-            {Object.values(paragraph).map((item, j) => (
-              <Fragment key={j}>
-                {typeof item === "string" ? (
-                  <p key={j}>{item}</p>
-                ) : (
-                  <a key={j} href={item[1]}>
-                    {item[0]}
-                  </a>
-                )}
-              </Fragment>
-            ))}
-          </div>
-        ))}
+        {Object.values(entryBody).map((paragraph, i) => {
+          const paragraphContent = Object.values(paragraph).map((item, j) => (
+            <Fragment key={j}>
+              {typeof item === "string" ? (
+                item + " "
+              ) : (
+                <a key={j} href={item[1]}>
+                  {item[0]}
+                </a>
+              )}
+            </Fragment>
+          ));
+
+          return <p key={i}>{paragraphContent}</p>;
+        })}
       </div>
     );
   };
