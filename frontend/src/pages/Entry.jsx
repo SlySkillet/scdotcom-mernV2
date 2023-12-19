@@ -21,18 +21,31 @@ const Entry = function () {
     loadEntries();
   }, []);
 
-  const entryBodyToJSX = function (p) {
-    let input = [];
-    for (let pg of p) {
-      input.push(Object.values(pg));
+  const parseEntryBody = function (input) {
+    let parsedObj = [];
+    for (let p of input) {
+      parsedObj.push(Object.values(p));
     }
-    console.log("input=", input);
+    console.log("parsedObj=", parsedObj);
+    return parsedObj;
+  };
+
+  const parsedEntryBodyToJSX = function (input) {
+    const objectOrP = function (x) {
+      //   typeof x === "object" ? <Link>{x[0]}</Link> : <p>x</p>;
+      if (typeof x == "string") {
+        return <p key={x}>{x}</p>;
+      } else {
+        return <a href={x[1]}>{x[0]}</a>;
+      }
+    };
+    console.log("input", input[0]);
     return (
-      <p>
-        {input.map((par, i) => {
-          return <div key={i}>{par}</div>;
+      <div>
+        {input[0].map((iter, i) => {
+          return objectOrP(iter);
         })}
-      </p>
+      </div>
     );
   };
 
@@ -44,7 +57,11 @@ const Entry = function () {
             <p>{entry.createdAt}</p>
             <p>{entry.title}</p>
             <p>{entry.image}</p>
-            <div>{entryBodyToJSX(Object.values(entry.entryBody))}</div>
+            <div>
+              {parsedEntryBodyToJSX(
+                parseEntryBody(Object.values(entry.entryBody)),
+              )}
+            </div>
           </div>
         );
       })}
