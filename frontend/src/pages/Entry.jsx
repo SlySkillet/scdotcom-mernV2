@@ -16,6 +16,7 @@ const Entry = function () {
               new Date(a.date ? a.date : a.createdAt)
             );
           });
+          console.log(sortedData);
           setEntries(sortedData);
         } else {
           console.error(response);
@@ -72,7 +73,10 @@ Link once that portion of the application is running.
     <div>
       {entries.map((entry, i) => {
         return (
-          <div key={i}>
+          <div
+            key={i}
+            className={i === 0 ? "first left" : i % 2 === 1 ? "right" : "left"}
+          >
             <p>
               {entry.date
                 ? entry.date
