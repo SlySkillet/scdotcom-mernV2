@@ -1,9 +1,9 @@
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Entry from "./pages/Entry";
+import Blog from "./pages/Blog";
 function App() {
   return (
     <div>
-      <Entry />
+      <Blog />
     </div>
   );
 }

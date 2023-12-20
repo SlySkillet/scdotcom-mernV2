@@ -1,6 +1,7 @@
-import { React, useState, useEffect } from "react";
+import { useEffect, useState, Fragment } from "react";
+// import { Link } from "react-router-dom";
 
-function Blog() {
+const Blog = function () {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
@@ -9,7 +10,14 @@ function Blog() {
         const response = await fetch("http://localhost:8080/api/entries/");
         if (response.ok) {
           const data = await response.json();
-          setEntries(data);
+          const sortedData = data.sort((a, b) => {
+            return (
+              new Date(b.date ? b.date : b.createdAt) -
+              new Date(a.date ? a.date : a.createdAt)
+            );
+          });
+          console.log(sortedData);
+          setEntries(sortedData);
         } else {
           console.error(response);
         }
@@ -20,68 +28,90 @@ function Blog() {
     loadEntries();
   }, []);
 
-  // function that takes in an array and returns formatted paragraph.
-  const arrayToP = function (inputArray) {
-    let bodyParagraphs = [];
-    for (let i of inputArray) {
-      let str = "";
-      for (let j of Object.values(i)) {
-        if (typeof j === "object") {
-          str += j[0];
-        } else {
-          str += j;
-        }
-        str += " ";
-      }
-      bodyParagraphs.push(str);
+  const parseEntryBody = function (input) {
+    let parsedObj = [];
+    for (let p of input) {
+      parsedObj.push(Object.values(p));
     }
-    console.log(bodyParagraphs);
-    return bodyParagraphs;
+    return parsedObj;
   };
 
-  // function to write paragraph for p in bodyParagraphs
-  const bodyParagraphToJSX = function (bodyParagraphs) {
+  const parsedEntryBodyToJSX = function (entryBody) {
     return (
       <div>
-        {bodyParagraphs.map((p, idx) => {
-          return <p key={idx}>{p}</p>;
+        {Object.values(entryBody).map((paragraph, i) => {
+          const paragraphContent = Object.values(paragraph).map((item, j) => (
+            <Fragment key={j}>
+              {typeof item === "string" ? (
+                item + " "
+              ) : (
+                <a key={j} href={item[1]}>
+                  {item[0]}
+                </a>
+              )}
+            </Fragment>
+          ));
+
+          return <p key={i}>{paragraphContent}</p>;
         })}
       </div>
     );
   };
 
+  /*
+line 51 is using a tags because links go nowhere and react
+router has not been set up yet. They should be replaced with
+Link once that portion of the application is running.
+*/
+  const dateFormat = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+
   return (
     <div>
-      <div>Blodge</div>
-      <div>
-        {entries.map((entryIterable, idx) => {
-          return (
-            <div key={idx}>
-              {/* date */}
-              <p>
-                {entryIterable.date
-                  ? entryIterable.date
-                  : entryIterable.createdAt}
-              </p>
-
-              {/* title */}
-              <p>{entryIterable.title}</p>
-
-              {/* image */}
-              <p>{entryIterable.image ? entryIterable.image : null}</p>
-
-              {/* entry body */}
-              <p>
-                {bodyParagraphToJSX(
-                  arrayToP(Object.values(entryIterable.entryBody)),
-                )}
-              </p>
+      {entries.map((entry, i) => {
+        return (
+          <div
+            key={i}
+            className={i === 0 ? "first left" : i % 2 === 1 ? "right" : "left"}
+          >
+            <p>
+              {entry.date
+                ? entry.date
+                : new Date(entry.createdAt).toLocaleDateString(
+                    "en-US",
+                    dateFormat,
+                  )}
+            </p>
+            <p>{entry.title}</p>
+            <p>{entry.image}</p>
+            <div>
+              {parsedEntryBodyToJSX(
+                parseEntryBody(Object.values(entry.entryBody)),
+              )}
             </div>
-          );
-        })}
-      </div>
+            <ul>
+              {entry.links.map((link, i) => {
+                return (
+                  <li key={i}>
+                    <a href={link[1]}>{link[0]}</a>
+                  </li>
+                );
+              })}
+            </ul>
+            <p>
+              {"# "}
+              {entry.tags.map((tag, i) => {
+                return i < entry.tags.length - 1 ? tag + ", " : tag;
+              })}
+            </p>
+          </div>
+        );
+      })}
     </div>
   );
-}
+};
 
 export default Blog;
