@@ -1,4 +1,37 @@
 /* BLOG STYLES */
+* {
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 130px 1fr;
+  background-color: rgb(252, 242, 229);
+}
+
+.timeline {
+  grid-row: 2;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  background-color: rgb(226, 178, 148);
+  margin: 5px;
+  padding: 40px 0px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(252, 242, 229);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
 .left {
   background-color: aquamarine;
 }

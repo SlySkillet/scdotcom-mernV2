@@ -70,46 +70,54 @@ Link once that portion of the application is running.
   };
 
   return (
-    <div>
-      {entries.map((entry, i) => {
-        return (
-          <div
-            key={i}
-            className={i === 0 ? "first left" : i % 2 === 1 ? "right" : "left"}
-          >
-            <p>
-              {entry.date
-                ? entry.date
-                : new Date(entry.createdAt).toLocaleDateString(
-                    "en-US",
-                    dateFormat,
-                  )}
-            </p>
-            <p>{entry.title}</p>
-            <p>{entry.image}</p>
-            <div>
-              {parsedEntryBodyToJSX(
-                parseEntryBody(Object.values(entry.entryBody)),
-              )}
+    <div className="container">
+      <div className="timeline">
+        {entries.map((entry, i) => {
+          return (
+            <div
+              key={i}
+              className={
+                i === 0
+                  ? "entry first left"
+                  : i % 2 === 1
+                    ? "entry right"
+                    : "entry left"
+              }
+            >
+              <p>
+                {entry.date
+                  ? entry.date
+                  : new Date(entry.createdAt).toLocaleDateString(
+                      "en-US",
+                      dateFormat,
+                    )}
+              </p>
+              <p>{entry.title}</p>
+              <p>{entry.image}</p>
+              <div>
+                {parsedEntryBodyToJSX(
+                  parseEntryBody(Object.values(entry.entryBody)),
+                )}
+              </div>
+              <ul>
+                {entry.links.map((link, i) => {
+                  return (
+                    <li key={i}>
+                      <a href={link[1]}>{link[0]}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+              <p>
+                {"# "}
+                {entry.tags.map((tag, i) => {
+                  return i < entry.tags.length - 1 ? tag + ", " : tag;
+                })}
+              </p>
             </div>
-            <ul>
-              {entry.links.map((link, i) => {
-                return (
-                  <li key={i}>
-                    <a href={link[1]}>{link[0]}</a>
-                  </li>
-                );
-              })}
-            </ul>
-            <p>
-              {"# "}
-              {entry.tags.map((tag, i) => {
-                return i < entry.tags.length - 1 ? tag + ", " : tag;
-              })}
-            </p>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
