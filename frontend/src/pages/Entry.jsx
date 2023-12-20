@@ -1,5 +1,5 @@
 import { useEffect, useState, Fragment } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Entry = function () {
   const [entries, setEntries] = useState([]);
@@ -32,7 +32,6 @@ const Entry = function () {
     for (let p of input) {
       parsedObj.push(Object.values(p));
     }
-    console.log("parsedObj=", parsedObj);
     return parsedObj;
   };
 
@@ -89,23 +88,19 @@ Link once that portion of the application is running.
                 parseEntryBody(Object.values(entry.entryBody)),
               )}
             </div>
-            <ui>
+            <ul>
               {entry.links.map((link, i) => {
                 return (
-                  <li>
+                  <li key={i}>
                     <a href={link[1]}>{link[0]}</a>
                   </li>
                 );
               })}
-            </ui>
+            </ul>
             <p>
               {"# "}
               {entry.tags.map((tag, i) => {
-                if (i < entry.tags.length - 1) {
-                  return tag + ", ";
-                } else {
-                  return tag;
-                }
+                return i < entry.tags.length - 1 ? tag + ", " : tag;
               })}
             </p>
           </div>

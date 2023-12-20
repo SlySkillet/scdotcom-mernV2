@@ -1,11 +1,9 @@
-// import Blog from "./pages/Blog";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Entry from "./pages/Entry";
 function App() {
   return (
     <div>
-      <h1>Blodge</h1>
       <Entry />
-      {/* <Blog /> */}
     </div>
   );
 }
