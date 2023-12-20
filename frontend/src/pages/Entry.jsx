@@ -10,7 +10,13 @@ const Entry = function () {
         const response = await fetch("http://localhost:8080/api/entries/");
         if (response.ok) {
           const data = await response.json();
-          setEntries(data);
+          const sortedData = data.sort((a, b) => {
+            return (
+              new Date(b.date ? b.date : b.createdAt) -
+              new Date(a.date ? a.date : a.createdAt)
+            );
+          });
+          setEntries(sortedData);
         } else {
           console.error(response);
         }
@@ -57,13 +63,25 @@ line 51 is using a tags because links go nowhere and react
 router has not been set up yet. They should be replaced with
 Link once that portion of the application is running.
 */
+  const dateFormat = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
 
   return (
     <div>
       {entries.map((entry, i) => {
         return (
           <div key={i}>
-            <p>{entry.createdAt}</p>
+            <p>
+              {entry.date
+                ? entry.date
+                : new Date(entry.createdAt).toLocaleDateString(
+                    "en-US",
+                    dateFormat,
+                  )}
+            </p>
             <p>{entry.title}</p>
             <p>{entry.image}</p>
             <div>
