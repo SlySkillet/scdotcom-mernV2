@@ -1,5 +1,6 @@
 import { useEffect, useState, Fragment } from "react";
 // import { Link } from "react-router-dom";
+import { FaEarlybirds } from "react-icons/fa";
 
 const Blog = function () {
   const [entries, setEntries] = useState([]);
@@ -95,7 +96,9 @@ Link once that portion of the application is running.
                 >
                   {/* <div className="timeline-icon right-icon"> */}
                   <div className="icon-wrapper">
-                    <i className="icon">{/* <FaMapMarkedAlt /> */}</i>
+                    <i className="icon FaEarlybirds">
+                      <FaEarlybirds />
+                    </i>
                   </div>
                 </div>
                 <div className="entry">
