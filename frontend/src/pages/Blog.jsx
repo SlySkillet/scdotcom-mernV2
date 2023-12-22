@@ -109,7 +109,11 @@ Link once that portion of the application is running.
                   </p>
                   <h4 className="title">{entry.title}</h4>
                   <div className="inner-entry">
-                    <p className="thumbnail">{entry.image}</p>
+                    <p className="thumbnail">
+                      {entry.image.length < 30
+                        ? entry.image
+                        : entry.image.slice(0, 30)}
+                    </p>
                     <p>
                       {parsedEntryBodyToJSX(
                         parseEntryBody(Object.values(entry.entryBody)),
