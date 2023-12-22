@@ -71,52 +71,73 @@ Link once that portion of the application is running.
 
   return (
     <div className="container">
-      <div className="timeline">
-        {entries.map((entry, i) => {
-          return (
-            <div
-              key={i}
-              className={
-                i === 0
-                  ? "entry first left"
-                  : i % 2 === 1
-                    ? "entry right"
-                    : "entry left"
-              }
-            >
-              <p>
-                {entry.date
-                  ? entry.date
-                  : new Date(entry.createdAt).toLocaleDateString(
-                      "en-US",
-                      dateFormat,
-                    )}
-              </p>
-              <p>{entry.title}</p>
-              <p>{entry.image}</p>
-              <div>
-                {parsedEntryBodyToJSX(
-                  parseEntryBody(Object.values(entry.entryBody)),
-                )}
+      <div className="main-container">
+        <div className="timeline">
+          {entries.map((entry, i) => {
+            return (
+              <div
+                key={i}
+                className={
+                  i === 0
+                    ? "entry-container first left"
+                    : i % 2 === 1
+                      ? "entry-container right"
+                      : "entry-container left"
+                }
+              >
+                <div
+                  key={i}
+                  className={
+                    i % 2 === 1
+                      ? "timeline-icon right-icon"
+                      : "timeline-icon left-icon"
+                  }
+                >
+                  {/* <div className="timeline-icon right-icon"> */}
+                  <div className="icon-wrapper">
+                    <i className="icon">{/* <FaMapMarkedAlt /> */}</i>
+                  </div>
+                </div>
+                <div className="entry">
+                  <p className="date">
+                    {entry.date
+                      ? entry.date
+                      : new Date(entry.createdAt).toLocaleDateString(
+                          "en-US",
+                          dateFormat,
+                        )}
+                  </p>
+                  <h4 className="title">{entry.title}</h4>
+                  <div className="inner-entry">
+                    <p className="thumbnail">{entry.image}</p>
+                    <p>
+                      {parsedEntryBodyToJSX(
+                        parseEntryBody(Object.values(entry.entryBody)),
+                      )}
+                    </p>
+                    <ul>
+                      {entry.links.map((link, i) => {
+                        return (
+                          <li key={i}>
+                            <a href={link[1]}>{link[0]}</a>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                  <div className="lower-entry">
+                    <p className="tags">
+                      {"# "}
+                      {entry.tags.map((tag, i) => {
+                        return i < entry.tags.length - 1 ? tag + ", " : tag;
+                      })}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <ul>
-                {entry.links.map((link, i) => {
-                  return (
-                    <li key={i}>
-                      <a href={link[1]}>{link[0]}</a>
-                    </li>
-                  );
-                })}
-              </ul>
-              <p>
-                {"# "}
-                {entry.tags.map((tag, i) => {
-                  return i < entry.tags.length - 1 ? tag + ", " : tag;
-                })}
-              </p>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
