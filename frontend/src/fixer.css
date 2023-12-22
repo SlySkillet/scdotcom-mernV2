@@ -16,6 +16,8 @@
   grid-row: 2;
 }
 
+/* TIMELINE STYLES */
+
 .timeline {
   position: relative;
   margin: 0 auto;
@@ -48,6 +50,7 @@
   vertical-align: middle;
   z-index: 1;
   pointer-events: auto;
+  margin-top: 20px;
 }
 
 .timeline-icon.left-icon {
@@ -75,16 +78,13 @@ i.icon {
   font-size: 24px;
 }
 
+/* ENTRY STYLES */
+
 .entry-container {
-  /* border: 1px solid red; */
   width: 50%;
   position: relative;
   padding: 10px;
 }
-
-/* .entry-container.left {
-  padding: 10px 30px 10px 10px;
-} */
 
 .left {
   left: 0;
@@ -104,11 +104,56 @@ i.icon {
   margin-top: -50px;
 }
 
+/* triangles */
+
+.left:before {
+  position: absolute;
+  top: 45px;
+  right: 43px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  background-color: rgb(254, 225, 254);
+  /* background-color: rgb(254, 241, 225); */
+  border-color: rgb(51, 51, 51);
+  content: "";
+  transform: rotate(45deg);
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  z-index: 1;
+}
+
+.right:after {
+  position: absolute;
+  left: 43px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  background-color: rgb(254, 225, 254);
+  border-color: rgb(51, 51, 51);
+  top: 45px;
+  content: "";
+  transform: rotate(45deg);
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-top: none;
+  border-right: none;
+  z-index: 1;
+}
+
 .entry {
   background-color: rgb(254, 225, 254);
   position: relative;
   border: 1px solid rgb(51, 51, 51);
-  padding: 8px;
+  padding: 9px;
   /* display: inline-block; */
 }
 
