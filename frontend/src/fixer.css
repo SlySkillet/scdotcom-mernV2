@@ -1,0 +1,24 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  background-color: rgb(252, 242, 229);
+  display: grid;
+  grid-template-rows: 130px 1fr;
+  grid-template-columns: 100%;
+  /* maybe some fuckery afoot here */
+  min-height: 100vh;
+}
+
+.main-container {
+  grid-row: 2;
+  /* grid-column: 1/2;
+  display: grid; */
+  border: 1px solid red;
+}
+
+/* .container > div {
+  border: 1px solid black;
+  box-sizing: border-box;
+} */
