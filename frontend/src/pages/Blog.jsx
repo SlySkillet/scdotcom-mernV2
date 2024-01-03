@@ -53,7 +53,11 @@ const Blog = function () {
             </Fragment>
           ));
 
-          return <p key={i}>{paragraphContent}</p>;
+          return (
+            <p className="paragraph" key={i}>
+              {paragraphContent}
+            </p>
+          );
         })}
       </div>
     );
