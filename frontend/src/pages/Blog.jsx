@@ -3,12 +3,18 @@ import { useEffect, useState, Fragment } from "react";
 import { FaEarlybirds } from "react-icons/fa";
 
 const Blog = function () {
+  const host = process.env.REACT_APP_SERVER_IP;
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
     async function loadEntries() {
       try {
-        const response = await fetch("http://localhost:8080/api/entries/");
+        const response = await fetch(`http://${host}/api/entries/`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         if (response.ok) {
           const data = await response.json();
           const sortedData = data.sort((a, b) => {
@@ -27,7 +33,7 @@ const Blog = function () {
       }
     }
     loadEntries();
-  }, []);
+  }, [host]);
 
   const parseEntryBody = function (input) {
     let parsedObj = [];
@@ -86,8 +92,8 @@ Link once that portion of the application is running.
                   i === 0
                     ? "entry-container first left"
                     : i % 2 === 1
-                      ? "entry-container right"
-                      : "entry-container left"
+                    ? "entry-container right"
+                    : "entry-container left"
                 }
               >
                 <div
@@ -111,7 +117,7 @@ Link once that portion of the application is running.
                       ? entry.date
                       : new Date(entry.createdAt).toLocaleDateString(
                           "en-US",
-                          dateFormat,
+                          dateFormat
                         )}
                   </p>
                   <h4 className="title">{entry.title}</h4>
@@ -123,7 +129,7 @@ Link once that portion of the application is running.
                     </p>
                     <p>
                       {parsedEntryBodyToJSX(
-                        parseEntryBody(Object.values(entry.entryBody)),
+                        parseEntryBody(Object.values(entry.entryBody))
                       )}
                     </p>
                     <ul>
