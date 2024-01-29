@@ -6,6 +6,7 @@
 }
 
 .container {
+  grid-row: 2;
   background-color: rgb(252, 242, 229);
   display: grid;
   grid-template-rows: 130px 1fr;
