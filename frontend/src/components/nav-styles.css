@@ -1,6 +1,44 @@
 .nav-container {
   grid-row: 1;
+  display: grid;
+  grid-template-columns: 100px 1fr;
   background-color: rgb(51, 51, 51);
   border-bottom: 1px solid rgb(182, 182, 182);
   height: 50px;
+  align-content: center;
+}
+.nav-spacer,
+.nav-link,
+.brand {
+  color: white;
+}
+.brand {
+  justify-self: center;
+  font-size: 40px;
+  text-shadow: -3px 1px coral, -1px 0 rgb(82, 82, 82), 0 1px rgb(82, 82, 82),
+    1px 0 rgb(82, 82, 82), 0 -1px rgb(82, 82, 82);
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.links {
+  padding: 0px 0px 0px 45px;
+  align-items: center;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-spacer {
+  margin: 0px 30px;
+}
+
+.nav-link {
+  font-weight: 100;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: aqua;
 }
