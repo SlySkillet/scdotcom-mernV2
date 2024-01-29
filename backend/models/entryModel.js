@@ -14,7 +14,7 @@ const entrySchema = mongoose.Schema(
       required: false,
     },
     image: {
-      type: String,
+      type: Object,
       required: false,
     },
     entryBody: {
