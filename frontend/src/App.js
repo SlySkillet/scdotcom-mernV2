@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Blog from "./components/Blog";
+import NavBar from "./components/navbar/NavBar";
+import Blog from "./components/blog/Blog";
 function App() {
   return (
     <div className="grid">
