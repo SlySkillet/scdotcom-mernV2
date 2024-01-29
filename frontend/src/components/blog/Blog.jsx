@@ -111,7 +111,6 @@ Link once that portion of the application is running.
                       : "timeline-icon left-icon"
                   }
                 >
-                  {/* <div className="timeline-icon right-icon"> */}
                   <div className="icon-wrapper">
                     <i className="icon FaEarlybirds">
                       <FaEarlybirds />
@@ -129,16 +128,16 @@ Link once that portion of the application is running.
                   </p>
                   <h4 className="title">{entry.title}</h4>
                   <div className="inner-entry">
-                    <p className="thumbnail">
+                    {/* <p className="thumbnail">
                       {entry.image.length < 30
                         ? entry.image
                         : entry.image.slice(0, 30)}
-                    </p>
-                    <p>
+                    </p> */}
+                    <div>
                       {parsedEntryBodyToJSX(
                         parseEntryBody(Object.values(entry.entryBody))
                       )}
-                    </p>
+                    </div>
                     <ul>
                       {entry.links.map((link, i) => {
                         return (
