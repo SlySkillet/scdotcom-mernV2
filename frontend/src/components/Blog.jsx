@@ -1,4 +1,5 @@
 import { useEffect, useState, Fragment } from "react";
+import "./blog-styles.css";
 // import { Link } from "react-router-dom";
 import { FaEarlybirds } from "react-icons/fa";
 
