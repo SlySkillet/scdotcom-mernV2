@@ -1,0 +1,9 @@
+.thumbnail#goldbird {
+  background-color: brown;
+  color: gold;
+}
+
+img#earthImage {
+  margin: 0px 0px 0px 5px;
+  width: 300px;
+}

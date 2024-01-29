@@ -213,6 +213,15 @@ i.icon.FaEarlybirds {
   margin: 0px 8px;
 }
 
+.inner-entry {
+  display: inline-block;
+}
+
+.thumbnail {
+  padding: 10px 0px 0px 0px;
+  float: right;
+}
+
 .lower-entry {
   background-color: rgb(144, 137, 134);
   color: rgb(239, 239, 239);

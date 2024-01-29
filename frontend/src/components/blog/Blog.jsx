@@ -1,7 +1,9 @@
 import { useEffect, useState, Fragment } from "react";
 import "./blog-styles.css";
+import "./thumbnail-styles.css";
 // import { Link } from "react-router-dom";
 import { FaEarlybirds } from "react-icons/fa";
+import imagesDirectory from "./imagesDirectory";
 
 const Blog = function () {
   const host = process.env.REACT_APP_SERVER_IP;
@@ -128,11 +130,33 @@ Link once that portion of the application is running.
                   </p>
                   <h4 className="title">{entry.title}</h4>
                   <div className="inner-entry">
-                    {/* <p className="thumbnail">
-                      {entry.image.length < 30
-                        ? entry.image
-                        : entry.image.slice(0, 30)}
-                    </p> */}
+                    {typeof entry.image === "object" ? (
+                      entry.image.type === "react-icon" ? (
+                        <div
+                          className="thumbnail"
+                          id={entry.image.styleId}
+                          style={{ fontSize: entry.image.width }}
+                        >
+                          {imagesDirectory[entry.image.img]}
+                        </div>
+                      ) : (
+                        <img
+                          className="thumbnail"
+                          src={imagesDirectory[entry.image.img]}
+                          alt="img"
+                          id={entry.image.styleId}
+                        />
+                      )
+                    ) : null}
+                    {/* {typeof entry.image === "object" ? (
+                      <div
+                        className="thumbnail"
+                        id={entry.image.styleId}
+                        style={{ fontSize: entry.image.width }}
+                      >
+                        {imagesDirectory[entry.image.img]}
+                      </div>
+                    ) : null} */}
                     <div>
                       {parsedEntryBodyToJSX(
                         parseEntryBody(Object.values(entry.entryBody))
