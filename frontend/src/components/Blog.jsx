@@ -83,6 +83,12 @@ Link once that portion of the application is running.
 
   return (
     <div className="container">
+      <div className="blog header">
+        <p className="blog title"> Blog </p>
+        <p className="blog subtext">
+          come here for your daily dose of the goods
+        </p>
+      </div>
       <div className="main-container">
         <div className="timeline">
           {entries.map((entry, i) => {

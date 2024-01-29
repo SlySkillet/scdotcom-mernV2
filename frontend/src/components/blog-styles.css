@@ -9,12 +9,34 @@
   grid-row: 2;
   background-color: rgb(252, 242, 229);
   display: grid;
-  grid-template-rows: 130px 1fr;
+  grid-template-rows: 100px 1fr;
   grid-template-columns: 100%;
 }
 
 .main-container {
   grid-row: 2;
+}
+
+.blog.header {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: end;
+}
+
+.blog.title {
+  font-family: "ultra", serif;
+  font-size: 70px;
+  text-decoration: underline;
+  text-underline-position: auto;
+}
+
+.blog.title,
+.blog.subtext {
+  align-self: center;
+  color: rgb(51, 51, 51);
+  grid-row: 1;
+  margin: 0px;
 }
 
 /* TIMELINE STYLES */

@@ -13,9 +13,6 @@ const NavBar = function () {
           Projects
         </Link>
         <Link className="nav-link" to="/">
-          About
-        </Link>
-        <Link className="nav-link" to="/">
           Resume
         </Link>
         <div className="nav-spacer">|</div>
