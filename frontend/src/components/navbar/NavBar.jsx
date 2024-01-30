@@ -9,11 +9,14 @@ const NavBar = function () {
         <Link className="nav-link" to="/">
           Home
         </Link>
-        <Link className="nav-link" to="/">
+        <Link className="nav-link" to="/projects">
           Projects
         </Link>
-        <Link className="nav-link" to="/">
+        <Link className="nav-link" to="/resume">
           Resume
+        </Link>
+        <Link className="nav-link" to="/contact">
+          Contact
         </Link>
         <div className="nav-spacer">|</div>
         <Link className="nav-link" to="/blog">
