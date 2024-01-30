@@ -1,7 +1,7 @@
-.thumbnail#goldbird {
+/* .thumbnail#nytLogo {
   background-color: brown;
   color: gold;
-}
+} */
 
 img#earthImage {
   margin: 0px 0px 0px 5px;
@@ -21,11 +21,20 @@ img#rickScience {
   color: rgb(51, 51, 51);
 }
 
-.thumbnail#googleEarth {
+.thumbnail#googleEarth,
+.thumbnail#nytLogo {
   padding: 20px;
-  background-color: rgb(221, 221, 221);
-  color: rgb(51, 51, 51);
   margin: 0px 0px 0px 10px;
   display: flex;
   align-content: center;
+}
+
+.thumbnail#googleEarth {
+  background-color: rgb(221, 221, 221);
+  color: rgb(51, 51, 51);
+}
+
+.thumbnail#nytLogo {
+  /* background-color: rgb(237, 185, 255); */
+  color: rgb(51, 51, 51);
 }
