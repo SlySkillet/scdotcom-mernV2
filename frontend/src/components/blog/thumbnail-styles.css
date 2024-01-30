@@ -12,6 +12,11 @@ img#samAltman1 {
   width: 150px;
 }
 
+img#rickScience {
+  width: 200px;
+  margin: 0px 10px;
+}
+
 .thumbnail#kiwiBird {
   color: rgb(51, 51, 51);
 }

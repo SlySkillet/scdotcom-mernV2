@@ -11,6 +11,8 @@ const imagesDirectory = {
     "https://res.cloudinary.com/ddgt67wcb/image/upload/v1706632913/sam_altman_t8nyya.jpg",
   kiwi: <GiKiwiBird />,
   google_earth: <SiGoogleearthengine />,
+  focus_on_science:
+    "https://res.cloudinary.com/ddgt67wcb/image/upload/v1706639062/focus_on_science_nx7vyn.png",
 };
 
 export default imagesDirectory;
