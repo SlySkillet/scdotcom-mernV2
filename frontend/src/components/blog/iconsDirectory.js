@@ -1,4 +1,4 @@
-import { FaEarlybirds, FaCommentDollar, FaRegCompass } from "react-icons/fa";
+import { FaEarlybirds, FaCommentDollar } from "react-icons/fa";
 import { GiBrain, GiCompass } from "react-icons/gi";
 import { SiHiveBlockchain } from "react-icons/si";
 
