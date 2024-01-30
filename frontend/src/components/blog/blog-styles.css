@@ -27,6 +27,7 @@
 .blog.title {
   font-family: "ultra", serif;
   font-size: 70px;
+  font-weight: 900;
   text-decoration: underline;
   text-underline-position: auto;
 }
@@ -188,7 +189,7 @@ i.icon.FaEarlybirds {
   background-color: rgb(254, 241, 225);
   position: relative;
   border: 1px solid rgb(51, 51, 51);
-  padding: 5px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   /* display: inline-block; */
 }
 
@@ -201,16 +202,18 @@ i.icon.FaEarlybirds {
 
 .title {
   font-size: 22px;
+  font-weight: 900;
+  margin: 0px 20px 5px 20px;
 }
 
 .paragraph {
+  font-weight: 400;
   margin-bottom: 8px;
 }
 
 .date,
-.title,
 .inner-entry {
-  margin: 0px 8px;
+  margin: 0px 20px;
 }
 
 .inner-entry {
@@ -231,6 +234,7 @@ i.icon.FaEarlybirds {
 }
 
 ul {
+  margin-left: 15px;
   list-style-position: inside;
   padding: 0;
 }
