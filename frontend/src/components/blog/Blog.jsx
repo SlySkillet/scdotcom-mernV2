@@ -1,9 +1,11 @@
 import { useEffect, useState, Fragment } from "react";
 import "./blog-styles.css";
 import "./thumbnail-styles.css";
+import "./icon-styles.css";
 // import { Link } from "react-router-dom";
 import { FaEarlybirds } from "react-icons/fa";
 import imagesDirectory from "./imagesDirectory";
+import iconsDirectory from "./iconsDirectory";
 
 const Blog = function () {
   const host = process.env.REACT_APP_SERVER_IP;
@@ -114,9 +116,11 @@ Link once that portion of the application is running.
                   }
                 >
                   <div className="icon-wrapper">
-                    <i className="icon FaEarlybirds">
-                      <FaEarlybirds />
-                    </i>
+                    {
+                      <i className="icon" id={entry.subject}>
+                        {iconsDirectory[entry.subject]}
+                      </i>
+                    }
                   </div>
                 </div>
                 <div className="entry">
