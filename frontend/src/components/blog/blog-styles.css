@@ -241,6 +241,11 @@ i.icon.FaEarlybirds {
   float: right;
 }
 
+.entry-link,
+.entry-link:visited {
+  color: purple;
+}
+
 .lower-entry {
   /* background-color: rgb(144, 137, 134); */
   background-color: rgb(227, 227, 227);

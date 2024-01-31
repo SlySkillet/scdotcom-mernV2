@@ -1,11 +1,13 @@
 import { useEffect, useState, Fragment } from "react";
+import { Link } from "react-router-dom";
 import "./blog-styles.css";
 import "./thumbnail-styles.css";
 import "./icon-styles.css";
-// import { Link } from "react-router-dom";
-import { FaEarlybirds } from "react-icons/fa";
+
 import imagesDirectory from "./imagesDirectory";
 import iconsDirectory from "./iconsDirectory";
+
+import parseEntryLinks from "./parseEntryLinks";
 
 const Blog = function () {
   const host = process.env.REACT_APP_SERVER_IP;
@@ -57,9 +59,9 @@ const Blog = function () {
               {typeof item === "string" ? (
                 item + " "
               ) : (
-                <a key={j} href={item[1]}>
+                <Link className="entry-link" key={j} to={item[1]}>
                   {item[0]}
-                </a>
+                </Link>
               )}
             </Fragment>
           ));
@@ -152,27 +154,14 @@ Link once that portion of the application is running.
                         />
                       )
                     ) : null}
-                    {/* {typeof entry.image === "object" ? (
-                      <div
-                        className="thumbnail"
-                        id={entry.image.styleId}
-                        style={{ fontSize: entry.image.width }}
-                      >
-                        {imagesDirectory[entry.image.img]}
-                      </div>
-                    ) : null} */}
                     <div>
                       {parsedEntryBodyToJSX(
                         parseEntryBody(Object.values(entry.entryBody))
                       )}
                     </div>
                     <ul>
-                      {entry.links.map((link, i) => {
-                        return (
-                          <li key={i}>
-                            <a href={link[1]}>{link[0]}</a>
-                          </li>
-                        );
+                      {entry.links.map((listItem, i) => {
+                        return parseEntryLinks(listItem, i);
                       })}
                     </ul>
                   </div>
