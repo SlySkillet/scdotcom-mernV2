@@ -146,12 +146,22 @@ Link once that portion of the application is running.
                           {imagesDirectory[entry.image.img]}
                         </div>
                       ) : (
-                        <img
-                          className="thumbnail"
-                          src={imagesDirectory[entry.image.img]}
-                          alt="img"
-                          id={entry.image.styleId}
-                        />
+                        <div className="thumbnail">
+                          <img
+                            src={imagesDirectory[entry.image.img]}
+                            alt="img"
+                            id={entry.image.styleId}
+                          />
+                          <p className="caption">
+                            image:{" "}
+                            <Link
+                              className="entry-link"
+                              to={entry.image.creditUrl}
+                            >
+                              {entry.image.credit}
+                            </Link>
+                          </p>
+                        </div>
                       )
                     ) : null}
                     <div>
