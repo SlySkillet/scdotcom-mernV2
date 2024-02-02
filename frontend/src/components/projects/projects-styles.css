@@ -119,8 +119,7 @@
   font-size: 24px;
   padding-top: 3px;
 }
-
-/* card styles */
+/* card shape - box and carrot */
 
 .project-card {
   background-color: rgb(51, 51, 51);
@@ -130,6 +129,49 @@
   height: fit-content;
   color: white;
 }
+
+.left-project:before {
+  position: absolute;
+  top: 45px;
+  right: 43px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(82, 82, 82);
+  content: "";
+  transform: rotate(45deg);
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-bottom: none;
+  border-left: none;
+  z-index: 1;
+}
+
+.right-project:after {
+  position: absolute;
+  left: 43px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  background-color: rgb(51, 51, 51);
+  border-color: rgb(82, 82, 82);
+  top: 45px;
+  content: "";
+  transform: rotate(45deg);
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-top: none;
+  border-right: none;
+  z-index: 1;
+}
+/* card styles */
 
 .project-header,
 p.project-description {
