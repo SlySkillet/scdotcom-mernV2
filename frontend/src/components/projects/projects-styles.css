@@ -125,7 +125,7 @@
   background-color: rgb(51, 51, 51);
   border: rgb(82, 82, 82) 1px solid;
   /* max-width: 600px; */
-  min-width: 500px;
+  /* min-width: 500px; */
   height: fit-content;
   color: white;
 }
@@ -195,6 +195,7 @@ h5.project-description.project-title {
 
 .screenshots-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -243,4 +244,64 @@ button.btn.btn-primary {
 .project-detail {
   margin: 0px;
   color: rgb(200, 200, 200);
+}
+
+/* Media queries - Responsive timeline on screens less than 850px wide */
+@media screen and (max-width: 850px) {
+  /* Place the timelime to the left */
+  .main-projects-container::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .project-card-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    /* margin-bottom: 150px; */
+    margin: 10px 0px 10px 0px;
+  }
+
+  /* .project-card-container.first {
+    margin-top: 5px;
+  } */
+
+  /* .project-card-container {
+    margin-top: 50px;
+  } */
+
+  /* Make sure that all arrows are pointing leftwards */
+  .project-card-container::before,
+  .project-card-container.right-project::after {
+    position: absolute;
+    left: 63px;
+    top: 45px;
+    /* right: 43px; */
+    border-top-width: 1px;
+    border-right-width: 1px;
+    background-color: rgb(51, 51, 51);
+    border-color: rgb(82, 82, 82);
+    content: "";
+    transform: rotate(45deg);
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    border-top: none;
+    border-right: none;
+    z-index: 1;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .project-icon,
+  .project-icon.right-icon {
+    left: 30px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right-project {
+    left: 0%;
+  }
 }
