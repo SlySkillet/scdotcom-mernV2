@@ -1,5 +1,7 @@
 import "./projects-styles.css";
 import Plunge from "./project-files/Plunge";
+import RadCar from "./project-files/RadCar";
+import TaskManager from "./project-files/TaskManager";
 
 const Projects = function () {
   return (
@@ -7,6 +9,8 @@ const Projects = function () {
       <h2 className="projects-page-title">Projects</h2>
       <div className="main-projects-container">
         <Plunge />
+        <RadCar />
+        <TaskManager />
       </div>
     </div>
   );
