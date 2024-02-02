@@ -73,23 +73,25 @@ function ProjectCard({
           <p className="shaded-text">{completedDate}</p>
         </div>
         <div className="screenshots-container">
-          {imageUrls.map((url) => {
-            return (
-              <Link
-                to={url}
-                key={url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="screenshot"
-                  src={url}
-                  alt="screenshot"
-                  width={imageWidth}
-                />
-              </Link>
-            );
-          })}
+          {imageUrls
+            ? imageUrls.map((url) => {
+                return (
+                  <Link
+                    to={url}
+                    key={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      className="screenshot"
+                      src={url}
+                      alt="screenshot"
+                      width={imageWidth}
+                    />
+                  </Link>
+                );
+              })
+            : null}
         </div>
         <div className="tech-icons-container">
           {techIcons.map((icon) => (

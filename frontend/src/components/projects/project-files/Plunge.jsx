@@ -35,7 +35,7 @@ function Plunge() {
       liveLink={"https://luckythirteen.gitlab.io/plunge/"}
       repoLink={"https://github.com/SlySkillet/plunge"}
       techStack={`React | FastAPI | Python | Javascript | SQL | GoogleMaps`}
-      rightOrLeft={"project-card-container left-project first"}
+      rightOrLeft={"project-card-container left-project"}
     />
   );
 }
