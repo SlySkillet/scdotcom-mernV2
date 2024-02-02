@@ -22,6 +22,9 @@ function TaskManager() {
       }
       techStack={`Django | Python | Plotly API`}
       rightOrLeft={"project-card-container left-project"}
+      iconClass={"project-icon left-icon"}
+      icon={<TbBrandDjango />}
+      iconID="TbBrandDjango"
     />
   );
 }

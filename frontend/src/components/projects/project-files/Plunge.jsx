@@ -36,6 +36,9 @@ function Plunge() {
       repoLink={"https://github.com/SlySkillet/plunge"}
       techStack={`React | FastAPI | Python | Javascript | SQL | GoogleMaps`}
       rightOrLeft={"project-card-container left-project"}
+      iconClass={"project-icon left-icon"}
+      icon={<SiFastapi />}
+      iconID="SiFastapi"
     />
   );
 }

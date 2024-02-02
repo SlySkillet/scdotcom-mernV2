@@ -10,9 +10,9 @@ const Projects = function () {
       <h2 className="projects-page-title">Projects</h2>
       <div className="main-projects-container">
         <BlogProject />
-        {/* <Plunge />
+        <Plunge />
         <RadCar />
-        <TaskManager /> */}
+        <TaskManager />
       </div>
     </div>
   );

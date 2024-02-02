@@ -26,6 +26,9 @@ function RadCar() {
       repoLink={"https://github.com/SlySkillet/radcar/tree/layout-experiment"}
       techStack={`Django | React | Python | Javascript | Docker`}
       rightOrLeft={"project-card-container right-project"}
+      iconClass={"project-icon right-icon"}
+      icon={<TbBrandDjango />}
+      iconID="TbBrandDjango"
     />
   );
 }
