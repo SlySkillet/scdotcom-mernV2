@@ -15,6 +15,9 @@ function ProjectCard({
   repoLink,
   techStack,
   rightOrLeft,
+  iconClass,
+  icon,
+  iconID,
 }) {
   //   const [projectModal, setProjectModal] = useState(false);
 
@@ -67,6 +70,13 @@ function ProjectCard({
 
   return (
     <div className={rightOrLeft}>
+      <div className={iconClass}>
+        <div className="project-icon-wrapper">
+          <i className="iconpr" id={iconID}>
+            {icon}
+          </i>
+        </div>
+      </div>
       <div className="project-card">
         <div className="project-header">
           <h5 className="project-description project-title">{projectTitle}</h5>

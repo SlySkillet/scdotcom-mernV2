@@ -9,7 +9,7 @@ import {
   SiNginx,
 } from "react-icons/si";
 
-function Plunge() {
+function BlogProject() {
   return (
     <ProjectCard
       projectTitle={"My Blog"}
@@ -31,8 +31,11 @@ function Plunge() {
       repoLink={"https://github.com/SlySkillet/scdotcom-mernV2"}
       techStack={`MongoDB | Express.js | React | Node.js | Nginx | Digital Ocean`}
       rightOrLeft={"project-card-container right-project first"}
+      iconClass={"project-icon right-icon"}
+      icon={<DiNodejsSmall />}
+      iconID="DiNodejsSmall"
     />
   );
 }
 
-export default Plunge;
+export default BlogProject;
