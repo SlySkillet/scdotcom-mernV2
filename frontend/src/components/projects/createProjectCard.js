@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import Carousel from "react-bootstrap/Carousel";
+// import Button from "react-bootstrap/Button";
+// import Modal from "react-bootstrap/Modal";
+// import Carousel from "react-bootstrap/Carousel";
 
 function ProjectCard({
   projectTitle,
@@ -16,10 +16,10 @@ function ProjectCard({
   techStack,
   rightOrLeft,
 }) {
-  const [projectModal, setProjectModal] = useState(false);
+  //   const [projectModal, setProjectModal] = useState(false);
 
-  const handleCloseProjectModal = () => setProjectModal(false);
-  const handleShowProjectModal = () => setProjectModal(true);
+  //   const handleCloseProjectModal = () => setProjectModal(false);
+  //   const handleShowProjectModal = () => setProjectModal(true);
 
   const projectLinkJSX = (liveLink, repoLink) => {
     if (liveLink) {
@@ -75,33 +75,22 @@ function ProjectCard({
         <div className="screenshots-container">
           {imageUrls.map((url) => {
             return (
-              <Button onClick={handleShowProjectModal} key={url}>
+              <Link
+                to={url}
+                key={url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   className="screenshot"
                   src={url}
                   alt="screenshot"
                   width={imageWidth}
                 />
-              </Button>
+              </Link>
             );
           })}
         </div>
-        <Modal show={projectModal} onHide={handleCloseProjectModal} size="xl">
-          <Modal.Header closeButton>
-            <Modal.Title>{projectTitle}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Carousel data-bs-theme="dark" indicators={false}>
-              {imageUrls.map((url) => {
-                return (
-                  <Carousel.Item key={url}>
-                    <img className="d-block w-100" src={url} alt="screenshot" />
-                  </Carousel.Item>
-                );
-              })}
-            </Carousel>
-          </Modal.Body>
-        </Modal>
         <div className="tech-icons-container">
           {techIcons.map((icon) => (
             <div className="tech-icon" key={icon}>
