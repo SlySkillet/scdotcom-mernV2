@@ -3,9 +3,11 @@
   display: grid;
   grid-template-columns: 100px 1fr;
   background-color: rgb(51, 51, 51);
-  border-bottom: 1px solid rgb(182, 182, 182);
+  border-bottom: 1px solid rgb(82, 82, 82);
   height: 50px;
   align-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 .nav-spacer,
 .nav-link,
@@ -13,13 +15,16 @@
   color: white;
 }
 .brand {
-  justify-self: center;
+  justify-self: left;
+  padding: 0px 8px;
   font-size: 40px;
   text-shadow: -3px 1px coral, -1px 0 rgb(82, 82, 82), 0 1px rgb(82, 82, 82),
     1px 0 rgb(82, 82, 82), 0 -1px rgb(82, 82, 82);
   font-family: "Black Ops One", system-ui;
   font-weight: 400;
   font-style: normal;
+  background-color: rgb(34, 34, 34);
+  border-bottom: 1px solid rgb(82, 82, 82);
 }
 
 .links {
