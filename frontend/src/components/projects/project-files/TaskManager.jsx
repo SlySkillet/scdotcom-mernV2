@@ -21,6 +21,7 @@ function TaskManager() {
         "https://github.com/SlySkillet/task-manager/tree/chart_experiment"
       }
       techStack={`Django | Python | Plotly API`}
+      rightOrLeft={"project-card-container left-project"}
     />
   );
 }

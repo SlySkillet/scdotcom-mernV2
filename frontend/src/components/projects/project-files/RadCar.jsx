@@ -25,6 +25,7 @@ function RadCar() {
       liveLink={null}
       repoLink={"https://github.com/SlySkillet/radcar/tree/layout-experiment"}
       techStack={`Django | React | Python | Javascript | Docker`}
+      rightOrLeft={"project-card-container right-project"}
     />
   );
 }

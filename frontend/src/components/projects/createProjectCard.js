@@ -14,6 +14,7 @@ function ProjectCard({
   liveLink,
   repoLink,
   techStack,
+  rightOrLeft,
 }) {
   const [projectModal, setProjectModal] = useState(false);
 
@@ -65,54 +66,56 @@ function ProjectCard({
   };
 
   return (
-    <div className="project-card">
-      <div className="project-header">
-        <h5 className="project-description project-title">{projectTitle}</h5>
-        <p className="shaded-text">{completedDate}</p>
-      </div>
-      <div className="screenshots-container">
-        {imageUrls.map((url) => {
-          return (
-            <Button onClick={handleShowProjectModal} key={url}>
-              <img
-                className="screenshot"
-                src={url}
-                alt="screenshot"
-                width={imageWidth}
-              />
-            </Button>
-          );
-        })}
-      </div>
-      <Modal show={projectModal} onHide={handleCloseProjectModal} size="xl">
-        <Modal.Header closeButton>
-          <Modal.Title>{projectTitle}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Carousel data-bs-theme="dark" indicators={false}>
-            {imageUrls.map((url) => {
-              return (
-                <Carousel.Item key={url}>
-                  <img className="d-block w-100" src={url} alt="screenshot" />
-                </Carousel.Item>
-              );
-            })}
-          </Carousel>
-        </Modal.Body>
-      </Modal>
-      <div className="tech-icons-container">
-        {techIcons.map((icon) => (
-          <div className="tech-icon" key={icon}>
-            {icon}
-          </div>
-        ))}
-      </div>
-      <p className="project-description">{description}</p>
-      <div className="project-detail-container">
-        {projectLinkJSX(liveLink, repoLink)}
-      </div>
-      <div className="project-detail-container">
-        <p className="project-detail">{techStack}</p>
+    <div className={rightOrLeft}>
+      <div className="project-card">
+        <div className="project-header">
+          <h5 className="project-description project-title">{projectTitle}</h5>
+          <p className="shaded-text">{completedDate}</p>
+        </div>
+        <div className="screenshots-container">
+          {imageUrls.map((url) => {
+            return (
+              <Button onClick={handleShowProjectModal} key={url}>
+                <img
+                  className="screenshot"
+                  src={url}
+                  alt="screenshot"
+                  width={imageWidth}
+                />
+              </Button>
+            );
+          })}
+        </div>
+        <Modal show={projectModal} onHide={handleCloseProjectModal} size="xl">
+          <Modal.Header closeButton>
+            <Modal.Title>{projectTitle}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Carousel data-bs-theme="dark" indicators={false}>
+              {imageUrls.map((url) => {
+                return (
+                  <Carousel.Item key={url}>
+                    <img className="d-block w-100" src={url} alt="screenshot" />
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+          </Modal.Body>
+        </Modal>
+        <div className="tech-icons-container">
+          {techIcons.map((icon) => (
+            <div className="tech-icon" key={icon}>
+              {icon}
+            </div>
+          ))}
+        </div>
+        <p className="project-description">{description}</p>
+        <div className="project-detail-container">
+          {projectLinkJSX(liveLink, repoLink)}
+        </div>
+        <div className="project-detail-container">
+          <p className="project-detail">{techStack}</p>
+        </div>
       </div>
     </div>
   );
