@@ -11,7 +11,7 @@
   background-color: rgb(51, 51, 51);
   display: grid;
   grid-template-rows: 50px 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 1fr;
   width: 800px;
   height: fit-content;
   max-width: 100%;
@@ -20,11 +20,41 @@
   justify-self: center;
 }
 
-.name-container {
+.box-left {
+  display: grid;
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  justify-items: center;
+  align-self: center;
+  height: fit-content;
+}
+
+.decoration {
+  color: rgb(170, 170, 170);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.name-box {
   display: flex;
   gap: 10px;
   color: white;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
+
+.name {
+  /* font-family: "Black Ops One", system-ui; */
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
+}
+/* .name::first-letter {
+  text-shadow: -3px 1px coral, -1px 0 rgb(82, 82, 82), 0 1px rgb(82, 82, 82),
+    1px 0 rgb(82, 82, 82), 0 -1px rgb(82, 82, 82);
+} */
 
 .portrait {
   width: 200px;
@@ -33,4 +63,9 @@
   align-self: center;
   justify-self: right;
   margin: 10px;
+}
+
+.title,
+.tech-list {
+  color: white;
 }
