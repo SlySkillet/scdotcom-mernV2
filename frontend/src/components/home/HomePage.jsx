@@ -13,7 +13,8 @@ function HomePage() {
           <FaCode className="decoration" />
           <h5 className="title">Software Engineer</h5>
           <p className="tech-list">
-            Python | Javascript | React | Django | FastAPI | SQL | Docker
+            Python | Javascript | React | Django | FastAPI | SQL | MongoDB |
+            Docker
           </p>
           <FaCode className="decoration" />
         </div>
