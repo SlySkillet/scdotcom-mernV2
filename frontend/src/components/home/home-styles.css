@@ -64,15 +64,15 @@
   grid-column: 2 / 3;
   align-self: center;
   justify-self: right;
-  margin: 10px;
+  margin: 5px;
 }
 
-.title,
+.my-title,
 .tech-list {
   color: white;
 }
 
-.title {
+.my-title {
   font-size: 26px;
 }
 
