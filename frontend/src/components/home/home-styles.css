@@ -1,13 +1,18 @@
 .home-container {
-  grid-row: 2;
   display: grid;
-  grid-template-rows: 45px 600px 45px;
+  grid-row: 2;
+  grid-template-rows: 100vh 150vh 100vh;
+}
+
+.title-page-container {
+  display: grid;
+  grid-template-rows: 100vh;
   background-image: url(https://res.cloudinary.com/ddgt67wcb/image/upload/v1694810547/map_background_2__Fotor_z7neiq.jpg);
 }
 
 .about-container {
   margin: 10px;
-  grid-row: 2;
+  grid-row: 1;
   background-color: rgb(51, 51, 51);
   border: rgb(82, 82, 82) 1px solid;
   box-shadow: 1px 1px 30px 3px rgb(88, 71, 33);
@@ -53,10 +58,6 @@
   font-style: normal;
   font-variation-settings: "BLED" 0, "SCAN" 0;
 }
-/* .name::first-letter {
-  text-shadow: -3px 1px coral, -1px 0 rgb(82, 82, 82), 0 1px rgb(82, 82, 82),
-    1px 0 rgb(82, 82, 82), 0 -1px rgb(82, 82, 82);
-} */
 
 .portrait {
   width: 200px;
@@ -78,4 +79,64 @@
 
 .tech-list {
   font-size: 17px;
+}
+
+.bio-container {
+  display: grid;
+  grid-template-rows: 10vh 130vh 10vh;
+  grid-row: 2 / 3;
+  background-color: rgb(51, 51, 51);
+}
+
+.skills-container {
+  grid-row: 2;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(34, 34, 34);
+  margin: 0px 20px;
+}
+
+.skills-box {
+  height: 400px;
+  background-color: rgb(51, 51, 51);
+  border: rgb(82, 82, 82) 1px solid;
+  width: 300px;
+  display: grid;
+  grid-template-rows: 50px 350px;
+  grid-template-columns: 300px;
+}
+
+.skills-head {
+  color: white;
+  justify-self: center;
+  font-size: 24px;
+  grid-row: 1;
+  grid-column: 1 / 2;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border-bottom: 1px solid rgb(82, 82, 82);
+}
+
+.skills-details {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  /* width: 100%; */
+  background-color: rgb(51, 51, 51);
+}
+
+.skill {
+  font-size: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
