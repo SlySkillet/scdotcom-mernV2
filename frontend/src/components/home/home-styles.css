@@ -1,12 +1,12 @@
 .home-container {
   display: grid;
   grid-row: 2;
-  grid-template-rows: 100vh 150vh 100vh;
+  grid-template-rows: 800px 1000px 800px;
 }
 
 .title-page-container {
   display: grid;
-  grid-template-rows: 100vh;
+  grid-template-rows: 800px;
   background-image: url(https://res.cloudinary.com/ddgt67wcb/image/upload/v1694810547/map_background_2__Fotor_z7neiq.jpg);
 }
 
@@ -83,7 +83,7 @@
 
 .bio-container {
   display: grid;
-  grid-template-rows: 10vh 130vh 10vh;
+  grid-template-rows: 50px 1000px 50px;
   grid-row: 2 / 3;
   background-color: rgb(51, 51, 51);
 }
@@ -91,23 +91,73 @@
 .skills-container {
   grid-row: 2;
   height: 600px;
-  display: flex;
+  display: grid;
+  grid-template-rows: 50px 550px;
+  grid-template-columns: 20px 1fr 1fr 1fr 20px;
   flex-wrap: wrap;
-  gap: 20px;
   align-items: center;
-  justify-content: center;
   background-color: rgb(34, 34, 34);
   margin: 0px 20px;
+  position: relative;
+}
+
+.label {
+  grid-column: 1;
+  width: 130px;
+  height: 30px;
+  background-color: white;
+
+  font-weight: 600;
+  font-size: 15px;
+  color: red;
+  padding: 5px 20px;
+  margin-left: 5px;
+  /* border: rgb(82, 82, 82) 1px solid; */
+  border: rgb(108, 108, 108) 2px solid;
+}
+
+.label::after {
+  content: "";
+  transform: rotate(45deg);
+  position: absolute;
+  left: 124px;
+  top: 29px;
+  border-left-width: 2px;
+  background-color: rgb(34, 34, 34);
+  height: 20px;
+  width: 20px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  /* border-color: rgb(82, 82, 82); */
+  border-color: rgb(108, 108, 108);
+  z-index: 1;
 }
 
 .skills-box {
+  grid-row: 2;
   height: 400px;
   background-color: rgb(51, 51, 51);
   border: rgb(82, 82, 82) 1px solid;
+  justify-self: center;
   width: 300px;
   display: grid;
   grid-template-rows: 50px 350px;
   grid-template-columns: 300px;
+}
+
+.skills-box.skills-box1 {
+  grid-column: 2;
+}
+
+.skills-box.skills-box2 {
+  grid-column: 3;
+}
+
+.skills-box.skills-box3 {
+  grid-column: 4;
 }
 
 .skills-head {

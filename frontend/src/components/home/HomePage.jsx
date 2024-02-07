@@ -26,20 +26,20 @@ function HomePage() {
           />
         </div>
         <div className="bio-container">
-          <p></p>
+          <p>bio</p>
           <div className="skills-container">
-            <div className="skills-box">
+            <p className="label">My Toolkit</p>
+            <div className="skills-box skills-box1">
               <h5 className="skills-head">Frontend</h5>
               <div className="skills-details">
                 <p className="skill">Javascript</p>
                 <p className="skill">React.js</p>
-                <p className="skill">React Hooks</p>
                 <p className="skill">Redux</p>
                 <p className="skill">CSS</p>
                 <p className="skill">HTML</p>
               </div>
             </div>
-            <div className="skills-box">
+            <div className="skills-box skills-box2">
               <h5 className="skills-head">Backend</h5>
               <div className="skills-details">
                 <p className="skill">Python</p>
@@ -50,7 +50,7 @@ function HomePage() {
                 <p className="skill">RESTful API</p>
               </div>
             </div>
-            <div className="skills-box">
+            <div className="skills-box skills-box3">
               <h5 className="skills-head">System</h5>
               <div className="skills-details">
                 <p className="skill">Docker</p>
