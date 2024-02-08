@@ -1,5 +1,6 @@
 import "./home-styles.css";
 import { FaCode } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
 
 function HomePage() {
   return (
@@ -26,7 +27,27 @@ function HomePage() {
           />
         </div>
         <div className="bio-container">
-          <p>bio</p>
+          <div className="aboutme-container">
+            <p className="aboutme aboutme1">
+              <FaPython className="aboutme-thumbnail" />I am a bootcamp-trained
+              software engineer specializing in python and javascript
+              programming for full stack web development. I am a passionate
+              creator with a background in art and fine dining. <br></br>
+              <br></br>
+              My journey in software engineering has revolved around
+              project-based learning, independently and in the Hack Reactor
+              Software Engineering Immersive. I became interested in attending a
+              bootcamp while exploring python fundamentals on my own in the
+              mornings before my kitchen shifts.
+            </p>
+            <p className="aboutme aboutme2">
+              I put this site together to present my projects and create a
+              living document of my coding practice. Building out my corner of
+              the internet has been a rewarding process and I’m pleased to see
+              it take form. I’m excited to iterate simonconrad.com further in my
+              exploration of today’s technology landscape.
+            </p>
+          </div>
           <div className="skills-container">
             <p className="label">My Toolkit</p>
             <div className="skills-box skills-box1">
