@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function FeaturedProject() {
   return (
     <div className="featured-project-container">
+      <div className="featured-label">Featured project</div>
       <div className="featured-card">
         <div className="featured-image-container">
           <Link to="/blog">
