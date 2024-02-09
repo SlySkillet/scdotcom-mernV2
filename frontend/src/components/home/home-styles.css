@@ -227,4 +227,59 @@ p.aboutme.aboutme2 {
   grid-row: 3 / 4;
   height: 800px;
   background-color: rgb(51, 51, 51);
+  display: grid;
+}
+
+.featured-card {
+  justify-self: center;
+  align-self: center;
+  height: 450px;
+  width: 500px;
+  background-color: rgb(34, 34, 34);
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container {
+  position: absolute; /* Set position to absolute to allow for positioning within the card */
+  top: 0; /* Position the image container at the top of the card */
+  left: 0; /* Position the image container at the left of the card */
+  width: 100%; /* Make the image container fill the width of the card */
+  height: 50%; /* Make the image container take up half the height of the card */
+}
+
+.card-image {
+  width: 100%; /* Make the image fill the width of its container */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+  object-fit: cover; /* Crop the image to cover the entire container */
+}
+
+.featured-description {
+  color: white;
+  margin: 20px 20px;
+  font-size: 20px;
+  text-align: justify;
+  text-align-last: left;
+  display: inline-block;
+}
+
+.featured-button {
+  text-decoration: none;
+  color: aqua;
+  border: 2px solid aqua;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.featured-button:hover {
+  color: rgb(51, 51, 51);
+  background-color: aqua;
+}
+
+.featured-links-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
