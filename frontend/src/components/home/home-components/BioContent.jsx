@@ -25,7 +25,7 @@ function BioContent() {
         </p>
       </div>
       <div className="skills-container">
-        <p className="label">My Toolkit</p>
+        <p className="skills-title">My toolkit</p>
         <table className="skills-box skills-box1">
           <thead className="skills-head">
             <h5>Frontend</h5>
@@ -63,39 +63,6 @@ function BioContent() {
             <tr className="skill">VIM</tr>
           </tbody>
         </table>
-        {/* <div className="skills-container">
-        <p className="label">My Toolkit</p>
-        <div className="skills-box skills-box1">
-          <h5 className="skills-head">Frontend</h5>
-          <div className="skills-details">
-            <p className="skill">Javascript</p>
-            <p className="skill">React.js</p>
-            <p className="skill">Redux</p>
-            <p className="skill">CSS</p>
-            <p className="skill">HTML</p>
-          </div>
-        </div>
-        <div className="skills-box skills-box2">
-          <h5 className="skills-head">Backend</h5>
-          <div className="skills-details">
-            <p className="skill">Python</p>
-            <p className="skill">Django</p>
-            <p className="skill">FastAPI</p>
-            <p className="skill">MongoDB</p>
-            <p className="skill">SQL</p>
-            <p className="skill">RESTful API</p>
-          </div>
-        </div>
-        <div className="skills-box skills-box3">
-          <h5 className="skills-head">System</h5>
-          <div className="skills-details">
-            <p className="skill">Docker</p>
-            <p className="skill">Nginx</p>
-            <p className="skill">Git Version Control</p>
-            <p className="skill">Node.js</p>
-            <p className="skill">VIM</p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
