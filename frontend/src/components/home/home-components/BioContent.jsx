@@ -26,6 +26,45 @@ function BioContent() {
       </div>
       <div className="skills-container">
         <p className="label">My Toolkit</p>
+        <table className="skills-box skills-box1">
+          <thead className="skills-head">
+            <h5>Frontend</h5>
+          </thead>
+          <tbody className="skills-details">
+            <tr className="skill">Javascript</tr>
+            <tr className="skill">React.js</tr>
+            <tr className="skill">Redux</tr>
+            <tr className="skill">CSS</tr>
+            <tr className="skill">HTML</tr>
+          </tbody>
+        </table>
+        <table className="skills-box skills-box2">
+          <thead className="skills-head">
+            <h5>Backend</h5>
+          </thead>
+          <tbody className="skills-details">
+            <tr className="skill">Python</tr>
+            <tr className="skill">Django</tr>
+            <tr className="skill">FastAPI</tr>
+            <tr className="skill">MongoDB</tr>
+            <tr className="skill">SQL</tr>
+            <tr className="skill">RESTful API</tr>
+          </tbody>
+        </table>
+        <table className="skills-box skills-box3">
+          <thead className="skills-head">
+            <h5>System</h5>
+          </thead>
+          <tbody className="skills-details">
+            <tr className="skill">Docker</tr>
+            <tr className="skill">Nginx</tr>
+            <tr className="skill">Git Version Control</tr>
+            <tr className="skill">Node.js</tr>
+            <tr className="skill">VIM</tr>
+          </tbody>
+        </table>
+        {/* <div className="skills-container">
+        <p className="label">My Toolkit</p>
         <div className="skills-box skills-box1">
           <h5 className="skills-head">Frontend</h5>
           <div className="skills-details">
@@ -56,7 +95,7 @@ function BioContent() {
             <p className="skill">Node.js</p>
             <p className="skill">VIM</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
