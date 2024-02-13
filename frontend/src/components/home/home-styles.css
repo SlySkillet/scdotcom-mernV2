@@ -198,15 +198,57 @@ p.aboutme.aboutme2 {
   background-color: rgb(51, 51, 51);
   color: white;
   justify-self: center;
-  font-size: 24px;
+  font-size: 28px;
+  padding: 0px 30px;
   grid-row: 1;
   grid-column: 1 / 2;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   align-content: center;
   border: 1px solid rgb(82, 82, 82);
+  position: relative;
+}
+
+.skills-head::after {
+  content: "";
+  transform: rotate(45deg);
+  position: absolute;
+  left: 144px;
+  top: -20px;
+  border-bottom-width: 2px;
+  background-color: rgb(34, 34, 34);
+  height: 40px;
+  width: 40px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: rgb(82, 82, 82);
+  /* border-color: rgb(108, 108, 108); */
+  z-index: 1;
+}
+
+.skills-head::before {
+  content: "";
+  /* transform: rotate(45deg); */
+  position: absolute;
+  left: 165px;
+  top: -7px;
+  border-bottom-width: 2px;
+  background-color: rgb(34, 34, 34);
+  height: 35px;
+  width: 135px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: rgb(82, 82, 82);
+  /* border-color: rgb(108, 108, 108); */
+  z-index: 1;
 }
 
 .skills-details {
