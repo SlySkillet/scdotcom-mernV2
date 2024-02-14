@@ -224,7 +224,7 @@ i.icon.FaEarlybirds {
 }
 
 .paragraph {
-  font-weight: 420;
+  font-weight: 350;
   margin: 0px 0px 10px 0px;
   /* text-align: justify;
   text-align-last: left; */
@@ -233,7 +233,7 @@ i.icon.FaEarlybirds {
 .date,
 .inner-entry {
   margin: 0px 20px;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .inner-entry {

@@ -1,7 +1,7 @@
 .home-container {
   display: grid;
   grid-row: 2;
-  grid-template-rows: 800px 1450px 800px 150px;
+  grid-template-rows: 800px fit-content 800px 150px;
 }
 
 .title-page-container {
@@ -83,14 +83,14 @@
 
 .bio-container {
   display: grid;
-  grid-template-rows: 150px 450px 150px 600px 0;
+  grid-template-rows: 150px fit-content 150px 600px 0;
   grid-row: 2 / 3;
   background-color: rgb(51, 51, 51);
   height: 1500px;
 }
 
 .aboutme-container {
-  height: 400px;
+  height: fit-content;
   grid-row: 2;
   display: grid;
   grid-template-columns: 200px 1fr 80px 1fr 200px;
@@ -386,4 +386,7 @@ p.aboutme.aboutme2 {
   color: white;
   margin: 0px 10px;
   font-size: 26px;
+}
+
+@media screen and (max-width: 1200px) {
 }
