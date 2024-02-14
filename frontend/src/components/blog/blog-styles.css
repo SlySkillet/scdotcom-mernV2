@@ -218,19 +218,22 @@ i.icon.FaEarlybirds {
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 26px;
+  font-weight: 800;
   margin: 0px 20px 5px 20px;
 }
 
 .paragraph {
-  font-weight: 400;
-  margin-bottom: 8px;
+  font-weight: 420;
+  margin: 0px 0px 10px 0px;
+  /* text-align: justify;
+  text-align-last: left; */
 }
 
 .date,
 .inner-entry {
   margin: 0px 20px;
+  font-size: 20px;
 }
 
 .inner-entry {
@@ -241,6 +244,7 @@ i.icon.FaEarlybirds {
   padding: 10px 0px 0px 0px;
   float: right;
   display: grid;
+  margin-left: 20px;
 }
 
 .caption {
@@ -248,12 +252,12 @@ i.icon.FaEarlybirds {
   font-style: italic;
   font-size: 14px;
   color: rgb(71, 71, 71);
-  margin-top: 3px;
+  margin: 3px 0px 5px 0px;
 }
 
 .entry-link,
 .entry-link:visited {
-  color: purple;
+  color: rgb(29, 94, 206);
 }
 
 .lower-entry {
