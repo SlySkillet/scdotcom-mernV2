@@ -1,0 +1,87 @@
+.contact-container {
+  grid-row: 2;
+  background-color: rgb(34, 34, 34);
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  justify-items: center;
+  height: 100vh;
+}
+
+.contact-title-container {
+  /* justify-self: center; */
+  grid-row: 1;
+  align-self: flex-end;
+  margin: 0px 0px 30px 0px;
+}
+
+.contact-title {
+  color: white;
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
+}
+
+.contact-info-container {
+  grid-row: 2;
+  display: grid;
+  width: 500px;
+  justify-items: center;
+  background-color: rgb(51, 51, 51);
+  border: 1px solid rgb(82, 82, 82);
+  height: fit-content;
+}
+
+.contact-subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  color: rgb(201, 201, 201);
+  font-style: italic;
+  margin: 50px 0px 0px 0px;
+}
+
+.contact-links-container {
+  margin-top: 10px;
+}
+
+.contact-button {
+  color: aqua;
+  padding: 10px 20px;
+  border: 2px solid aqua;
+  text-decoration: none;
+  margin: 0px 15px;
+  border-radius: 8px;
+}
+
+.contact-button:hover {
+  color: rgb(34, 34, 34);
+  background-color: aqua;
+}
+
+.button-icon {
+  font-size: 28px;
+  top: 7px;
+  position: relative;
+}
+
+.contact-email {
+  color: white;
+  text-decoration: underline;
+  font-size: 22px;
+  font-weight: 350;
+}
+
+.contact-summary {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  margin-top: 20px;
+  border-top: 1px solid rgb(82, 82, 82);
+  padding: 10px 15px;
+}
+
+.contact-detail {
+  font-size: 20px;
+  text-align: justify;
+  text-align-last: left;
+}
