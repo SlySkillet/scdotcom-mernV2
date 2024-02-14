@@ -15,7 +15,12 @@
   align-self: center;
   color: white;
   font-size: 30px;
-  text-decoration: underline;
+  color: white;
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
 }
 
 .main-projects-container {
@@ -183,6 +188,7 @@ p.project-description {
 
 p.project-description {
   margin: 10px;
+  font-size: 19px;
 }
 
 .project-header {
