@@ -13,8 +13,11 @@ RUN npm install
 # Layer 5: Copying all the files from the root of the project to the `app` directory in the container.
 COPY . .
 
-# Layer 6: Telling Docker that the container will listen on port 3000.
+# Layer 6: Setting the NODE_OPTIONS environment variable to adjust Node.js memory settings.
+ENV NODE_OPTIONS=--max_old_space_size=2048
+
+# Layer 7: Telling Docker that the container will listen on port 3000.
 EXPOSE 3000
 
-# Layer 7: Telling Docker to run the `npm start` command when the container is started.
+# Layer 8: Telling Docker to run the `npm start` command when the container is started.
 CMD ["npm", "start"]
