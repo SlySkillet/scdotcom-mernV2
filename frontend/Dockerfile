@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Layer 6: Setting the NODE_OPTIONS environment variable to adjust Node.js memory settings.
-ENV NODE_OPTIONS=--max_old_space_size=2048
+ENV NODE_OPTIONS=--max_old_space_size=800
 
 # Layer 7: Telling Docker that the container will listen on port 3000.
 EXPOSE 3000
