@@ -23,7 +23,7 @@ const corsOptionsLocal = {
 };
 
 const corsOptionsDroplet = {
-  origin: `http://${droplet}`,
+  origin: `http://www.simonconrad.com`,
   methods: "GET",
   credentials: true,
 };
