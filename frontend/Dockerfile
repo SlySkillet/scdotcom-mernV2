@@ -1,11 +1,23 @@
-# Use the official Nginx image as a base
-FROM nginx:alpine
+# Layer 1: Telling Docker to use the node:17-alpine image as the base image for the container.
+FROM node:17-alpine
 
-# Copy the built React app to the Nginx web root directory
-COPY build /usr/share/nginx/html
+# Layer 2: Telling Docker to create a directory called `app` in the container and set it as the working directory.
+WORKDIR /app
 
-# Expose port 80 to the outside world
-EXPOSE 80
+# Layer 3: Copying the package.json file from the root of the project to the `app` directory in the container.
+COPY package.json .
 
-# Command to start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Layer 4: Installing the dependencies listed in the package.json file.
+RUN npm install
+
+# Layer 5: Copying all the files from the root of the project to the `app` directory in the container.
+COPY . .
+
+# Layer 6: Setting the NODE_OPTIONS environment variable to adjust Node.js memory settings.
+ENV NODE_OPTIONS=--max_old_space_size=800
+
+# Layer 7: Telling Docker that the container will listen on port 3000.
+EXPOSE 3000
+
+# Layer 8: Telling Docker to run the `npm start` command when the container is started.
+CMD ["npm", "start"]
