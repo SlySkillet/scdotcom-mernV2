@@ -27,40 +27,68 @@ function BioContent() {
       <div className="skills-container">
         <p className="skills-title">My toolkit</p>
         <table className="skills-box skills-box1">
-          <thead className="skills-head">
-            <h5>Frontend</h5>
-          </thead>
+          <thead className="skills-head">Frontend</thead>
           <tbody className="skills-details">
-            <tr className="skill">Javascript</tr>
-            <tr className="skill">React.js</tr>
-            <tr className="skill">Redux</tr>
-            <tr className="skill">CSS</tr>
-            <tr className="skill">HTML</tr>
+            <tr className="skill">
+              <td>Javascript</td>
+            </tr>
+            <tr className="skill">
+              <td>React.js</td>
+            </tr>
+            <tr className="skill">
+              <td>Redux</td>
+            </tr>
+            <tr className="skill">
+              <td>CSS</td>
+            </tr>
+            <tr className="skill">
+              <td>HTML</td>
+            </tr>
           </tbody>
         </table>
         <table className="skills-box skills-box2">
           <thead className="skills-head">
-            <h5>Backend</h5>
+            <th>Backend</th>
           </thead>
           <tbody className="skills-details">
-            <tr className="skill">Python</tr>
-            <tr className="skill">Django</tr>
-            <tr className="skill">FastAPI</tr>
-            <tr className="skill">MongoDB</tr>
-            <tr className="skill">SQL</tr>
-            <tr className="skill">RESTful API</tr>
+            <tr className="skill">
+              <td>Python</td>
+            </tr>
+            <tr className="skill">
+              <td>Django</td>
+            </tr>
+            <tr className="skill">
+              <td>FastAPI</td>
+            </tr>
+            <tr className="skill">
+              <td>MongoDB</td>
+            </tr>
+            <tr className="skill">
+              <td>SQL</td>
+            </tr>
+            <tr className="skill">
+              <td>RESTful API</td>
+            </tr>
           </tbody>
         </table>
         <table className="skills-box skills-box3">
-          <thead className="skills-head">
-            <h5>System</h5>
-          </thead>
+          <thead className="skills-head">System</thead>
           <tbody className="skills-details">
-            <tr className="skill">Docker</tr>
-            <tr className="skill">Nginx</tr>
-            <tr className="skill">Git Version Control</tr>
-            <tr className="skill">Node.js</tr>
-            <tr className="skill">VIM</tr>
+            <tr className="skill">
+              <td>Docker</td>
+            </tr>
+            <tr className="skill">
+              <td>Nginx</td>
+            </tr>
+            <tr className="skill">
+              <td>Git Version Control</td>
+            </tr>
+            <tr className="skill">
+              <td>Node.js</td>
+            </tr>
+            <tr className="skill">
+              <td>VIM</td>
+            </tr>
           </tbody>
         </table>
       </div>
