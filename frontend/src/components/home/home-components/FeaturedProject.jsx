@@ -16,9 +16,11 @@ function FeaturedProject() {
           </Link>
         </div>
         <p className="featured-description">
-          I deployed the second iteration of my blog here at
-          simonconrad.com/blog. I created this space to share more in depth my
-          technical research and professional development.{" "}
+          My blog is a writing project where I am sharing interesting news and
+          happenings in the industry alongside my documentation of my learning
+          journey. You may visit it here at simonconrad.com/blog and view my
+          code on github. This was an exploration of Express.js, MongoDB, and
+          Nginx server configuration.{" "}
         </p>
         <div className="featured-links-box">
           <Link className="featured-button" to="/projects">

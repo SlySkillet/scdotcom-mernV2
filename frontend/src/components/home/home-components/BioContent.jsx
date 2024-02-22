@@ -27,7 +27,11 @@ function BioContent() {
       <div className="skills-container">
         <p className="skills-title">My toolkit</p>
         <table className="skills-box skills-box1">
-          <thead className="skills-head">Frontend</thead>
+          <thead className="skills-head">
+            <tr>
+              <th>Frontend</th>
+            </tr>
+          </thead>
           <tbody className="skills-details">
             <tr className="skill">
               <td>Javascript</td>
@@ -48,7 +52,9 @@ function BioContent() {
         </table>
         <table className="skills-box skills-box2">
           <thead className="skills-head">
-            <th>Backend</th>
+            <tr>
+              <th>Backend</th>
+            </tr>
           </thead>
           <tbody className="skills-details">
             <tr className="skill">
@@ -72,7 +78,11 @@ function BioContent() {
           </tbody>
         </table>
         <table className="skills-box skills-box3">
-          <thead className="skills-head">System</thead>
+          <thead className="skills-head">
+            <tr>
+              <th>System</th>
+            </tr>
+          </thead>
           <tbody className="skills-details">
             <tr className="skill">
               <td>Docker</td>
