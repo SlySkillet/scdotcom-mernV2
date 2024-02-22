@@ -1,8 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
-// import Button from "react-bootstrap/Button";
-// import Modal from "react-bootstrap/Modal";
-// import Carousel from "react-bootstrap/Carousel";
 
 function ProjectCard({
   projectTitle,
@@ -19,11 +15,6 @@ function ProjectCard({
   icon,
   iconID,
 }) {
-  //   const [projectModal, setProjectModal] = useState(false);
-
-  //   const handleCloseProjectModal = () => setProjectModal(false);
-  //   const handleShowProjectModal = () => setProjectModal(true);
-
   const projectLinkJSX = (liveLink, repoLink) => {
     if (liveLink) {
       return (
