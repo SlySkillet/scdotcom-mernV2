@@ -18,16 +18,21 @@ function FeaturedProject() {
         <p className="featured-description">
           My blog is a writing project where I am sharing interesting news and
           happenings in the industry alongside my documentation of my learning
-          journey. You may visit it here at simonconrad.com/blog and view my
-          code on github. This was an exploration of Express.js, MongoDB, and
-          Nginx server configuration.{" "}
+          journey. This was an exploration of Express.js, MongoDB, and Nginx
+          server configuration.{" "}
         </p>
         <div className="featured-links-box">
-          <Link className="featured-button" to="/projects">
-            Learn more
-          </Link>
           <Link className="featured-button" to="/blog">
             Visit my blog
+          </Link>
+          <Link
+            className="featured-button"
+            to="https://github.com/SlySkillet/scdotcom-mernV2"
+          >
+            View the code
+          </Link>
+          <Link className="featured-button" to="/projects">
+            More projects...
           </Link>
         </div>
       </div>

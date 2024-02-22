@@ -266,7 +266,7 @@ p.aboutme.aboutme2 {
   align-self: center;
   grid-column: 2;
   grid-row: 1;
-  height: 450px;
+  height: fit-content;
   width: 500px;
   background-color: rgb(34, 34, 34);
   border: 1px solid rgb(82, 82, 82);
@@ -301,6 +301,7 @@ p.aboutme.aboutme2 {
 .featured-button {
   text-decoration: none;
   color: aqua;
+  font-weight: 600px;
   border: 2px solid aqua;
   padding: 10px 20px;
   border-radius: 8px;
@@ -314,7 +315,8 @@ p.aboutme.aboutme2 {
 .featured-links-box {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .featured-label {
