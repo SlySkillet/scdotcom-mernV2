@@ -11,7 +11,13 @@ const parseEntryLinks = function (listItem, i) {
             " " + item
           )
         ) : (
-          <Link className="entry-link" key={idx} to={item[1]}>
+          <Link
+            className="entry-link"
+            key={idx}
+            to={item[1]}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {item[0]}
           </Link>
         );

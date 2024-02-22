@@ -30,7 +30,6 @@ const Blog = function () {
               new Date(a.date ? a.date : a.createdAt)
             );
           });
-          console.log(sortedData);
           setEntries(sortedData);
         } else {
           console.error(response);
@@ -59,7 +58,13 @@ const Blog = function () {
               {typeof item === "string" ? (
                 item + " "
               ) : (
-                <Link className="entry-link" key={j} to={item[1]}>
+                <Link
+                  className="entry-link"
+                  key={j}
+                  to={item[1]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {item[0]}
                 </Link>
               )}
@@ -76,11 +81,6 @@ const Blog = function () {
     );
   };
 
-  /*
-line 51 is using a tags because links go nowhere and react
-router has not been set up yet. They should be replaced with
-Link once that portion of the application is running.
-*/
   const dateFormat = {
     year: "numeric",
     month: "long",
@@ -157,6 +157,8 @@ Link once that portion of the application is running.
                             <Link
                               className="entry-link"
                               to={entry.image.creditUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {entry.image.credit}
                             </Link>
