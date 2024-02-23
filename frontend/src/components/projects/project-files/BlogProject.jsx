@@ -13,7 +13,7 @@ function BlogProject() {
   return (
     <ProjectCard
       projectTitle={"My Blog"}
-      completedDate={"August, 2023"}
+      completedDate={"October, 2023"}
       imageWidth={"170"}
       techIcons={[
         <SiMongodb />,
