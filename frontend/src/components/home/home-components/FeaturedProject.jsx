@@ -1,6 +1,10 @@
 import "../home-styles.css";
 import { Link } from "react-router-dom";
 
+function ScrollToTopOnMount() {
+  window.scrollTo(0, 0);
+}
+
 function FeaturedProject() {
   return (
     <div className="featured-project-container">
@@ -12,6 +16,7 @@ function FeaturedProject() {
               alt="blog"
               src="https://res.cloudinary.com/ddgt67wcb/image/upload/v1707445578/Screenshot_2024-02-08_at_9.24.53_PM_t0eibo.png"
               className="card-image"
+              onClick={ScrollToTopOnMount}
             />
           </Link>
         </div>
@@ -22,7 +27,11 @@ function FeaturedProject() {
           server configuration.{" "}
         </p>
         <div className="featured-links-box">
-          <Link className="featured-button" to="/blog">
+          <Link
+            className="featured-button"
+            to="/blog"
+            onClick={ScrollToTopOnMount}
+          >
             Visit my blog
           </Link>
           <Link
@@ -31,7 +40,11 @@ function FeaturedProject() {
           >
             View the code
           </Link>
-          <Link className="featured-button" to="/projects">
+          <Link
+            className="featured-button"
+            to="/projects"
+            onClick={ScrollToTopOnMount}
+          >
             More projects...
           </Link>
         </div>
