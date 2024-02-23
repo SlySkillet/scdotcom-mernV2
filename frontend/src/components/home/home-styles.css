@@ -106,9 +106,16 @@ p.aboutme {
 }
 
 .aboutme-thumbnail {
+  font-size: 180px;
+  margin: 15px 30px;
+}
+
+.aboutme-thumbnail.py {
   float: right;
-  font-size: 150px;
-  margin-left: 15px;
+}
+
+.aboutme-thumbnail.js {
+  float: left;
 }
 
 p.aboutme.aboutme1 {

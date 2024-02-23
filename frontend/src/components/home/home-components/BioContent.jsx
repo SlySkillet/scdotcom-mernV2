@@ -1,27 +1,33 @@
 import "../home-styles.css";
 import { FaPython } from "react-icons/fa";
+import { DiNodejsSmall } from "react-icons/di";
 function BioContent() {
   return (
     <div className="bio-container">
       <div className="aboutme-container">
         <p className="aboutme aboutme1">
-          <FaPython className="aboutme-thumbnail" />I am a bootcamp-trained
-          software engineer specializing in python and javascript programming
-          for full stack web development. I am a passionate creator with a
-          background in art and fine dining. <br></br>
-          <br></br>
-          My journey in software engineering has revolved around project-based
+          I am a bootcamp-trained software engineer specialized in Python and
+          Javascript programming for full stack web development. I am a
+          passionate creator with a background in art and fine dining. <br></br>
+          <br></br> <FaPython className="aboutme-thumbnail py" />I have
+          structured my journey in software engineering around project-based
           learning, independently and in the Hack Reactor Software Engineering
-          Immersive. I became interested in attending a bootcamp while exploring
-          python fundamentals on my own in the mornings before my kitchen
-          shifts.
+          Immersive. I began learning Python in morning sessions before kitchen
+          shifts in Washington, DC. As someone who enjoys training skills, the
+          daily practice grabbed me and I dove deeper into web development
+          fundamentals. Gaining modest proficiency in building with vanilla
+          javascript, html and css, I became interested in attending a bootcamp
+          to accelerate my learning, receive professional guidance and bring me
+          closer to an industry position.
         </p>
         <p className="aboutme aboutme2">
-          I put this site together to present my projects and create a living
-          document of my coding practice. Building out my corner of the internet
-          has been a rewarding process and I’m pleased to see it take form. I’m
-          excited to iterate simonconrad.com further in my exploration of
-          today’s technology landscape.
+          <DiNodejsSmall className="aboutme-thumbnail js" />I created
+          simonconrad.com to present my projects and create a living document of
+          my coding practice. Building it out has been a rewarding process and
+          I’m pleased to see it take form. This is a portfolio, a writing
+          project, and a platform for exploration. <br></br>
+          <br></br>I look forward to sharing my creations and research on
+          today’s technology landscape with you.
         </p>
       </div>
       <div className="skills-container">
