@@ -329,7 +329,7 @@ p.aboutme.aboutme2 {
 .featured-label {
   grid-row: 1;
   grid-column: 2;
-  top: 155px;
+  top: 140px;
   left: 10px;
   color: white;
   background-color: red;
