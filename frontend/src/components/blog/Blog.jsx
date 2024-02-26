@@ -16,7 +16,7 @@ const Blog = function () {
   useEffect(() => {
     async function loadEntries() {
       try {
-        const response = await fetch(`http://${host}/api/entries/`, {
+        const response = await fetch(`https://${host}/api/entries/`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
