@@ -37,7 +37,7 @@ function Contact() {
         <div className="contact-summary">
           <p className="contact-detail">
             I invite you to reach out on any of the above platforms and view my
-            open-source code on github. I am open to collaborate and open to
+            open-source code on GitHub. I am open to collaborate and open to
             work. Cheers!{" "}
           </p>
         </div>
