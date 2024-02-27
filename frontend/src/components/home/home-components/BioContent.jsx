@@ -21,13 +21,14 @@ function BioContent() {
           closer to an industry position.
         </p>
         <p className="aboutme aboutme2">
-          <DiNodejsSmall className="aboutme-thumbnail js" />I created
-          simonconrad.com to present my projects and create a living document of
-          my coding practice. Building it out has been a rewarding process and
-          I’m pleased to see it take form. This is a portfolio, a writing
-          project, and a platform for exploration. <br></br>
-          <br></br>I look forward to sharing my creations and research on
-          today’s technology landscape with you.
+          I created simonconrad.com to present my projects and create a living
+          document of my coding practice. Building it out has been a rewarding
+          process and I’m pleased to see it take form. This is a portfolio, a
+          writing project, and a platform for exploration. <br></br>
+          <br></br>
+          <DiNodejsSmall className="aboutme-thumbnail js" />I look forward to
+          sharing my creations and research on today’s technology landscape with
+          you.
         </p>
       </div>
       <div className="skills-container">

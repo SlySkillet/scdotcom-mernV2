@@ -94,14 +94,15 @@
   grid-row: 2;
   display: grid;
   grid-template-columns: 200px 1fr 80px 1fr 200px;
+  align-self: center;
   position: relative;
 }
 
 p.aboutme {
   color: white;
-  text-align: justify;
+  text-align: left;
   text-align-last: left;
-  font-size: 22px;
+  font-size: 18px;
   display: inline-block;
 }
 
@@ -115,7 +116,7 @@ p.aboutme {
 }
 
 .aboutme-thumbnail.js {
-  float: left;
+  float: right;
 }
 
 p.aboutme.aboutme1 {
@@ -299,8 +300,8 @@ p.aboutme.aboutme2 {
 .featured-description {
   color: white;
   margin: 20px 20px;
-  font-size: 20px;
-  text-align: justify;
+  font-size: 18px;
+  text-align: left;
   text-align-last: left;
   display: inline-block;
 }
