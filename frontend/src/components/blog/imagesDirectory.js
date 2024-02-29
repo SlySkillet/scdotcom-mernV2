@@ -2,6 +2,7 @@
 import { SiNewyorktimes } from "react-icons/si";
 import { GiKiwiBird } from "react-icons/gi";
 import { SiGoogleearthengine } from "react-icons/si";
+import { FaBitcoin } from "react-icons/fa";
 
 const imagesDirectory = {
   nyt: <SiNewyorktimes />,
@@ -13,6 +14,7 @@ const imagesDirectory = {
   google_earth: <SiGoogleearthengine />,
   focus_on_science:
     "https://res.cloudinary.com/ddgt67wcb/image/upload/v1706639062/focus_on_science_nx7vyn.png",
+  bitcoin: <FaBitcoin />,
 };
 
 export default imagesDirectory;
