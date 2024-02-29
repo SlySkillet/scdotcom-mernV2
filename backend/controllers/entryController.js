@@ -26,6 +26,7 @@ const postEntry = asyncHandler(async (req, res) => {
     entryBody: req.body.entryBody,
     links: req.body.links,
     tags: req.body.tags,
+    inDevelopment: req.body.inDevelopment,
   });
 
   res.status(200).json(entry);

@@ -29,6 +29,10 @@ const entrySchema = mongoose.Schema(
       type: Array,
       required: true,
     },
+    inDevelopment: {
+      type: Boolean,
+      required: false,
+    },
   },
   {
     timestamps: true,
