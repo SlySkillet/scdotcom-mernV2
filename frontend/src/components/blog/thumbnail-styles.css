@@ -13,6 +13,11 @@ img#rickScience {
   margin: 0px 10px;
 }
 
+img#solarModule {
+  margin: 0px 0px 0px 5px;
+  width: 300px;
+}
+
 /* react-icon styles */
 
 .thumbnail#kiwiBird {

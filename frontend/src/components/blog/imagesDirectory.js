@@ -15,6 +15,8 @@ const imagesDirectory = {
   focus_on_science:
     "https://res.cloudinary.com/ddgt67wcb/image/upload/v1706639062/focus_on_science_nx7vyn.png",
   bitcoin: <FaBitcoin />,
+  solar_module:
+    "https://res.cloudinary.com/ddgt67wcb/image/upload/v1709582870/hybrid-solar-module-graz-1_anikn5.webp",
 };
 
 export default imagesDirectory;

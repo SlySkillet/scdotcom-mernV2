@@ -1,5 +1,5 @@
 import { FaEarlybirds, FaCommentDollar } from "react-icons/fa";
-import { GiBrain, GiCompass } from "react-icons/gi";
+import { GiBrain, GiCompass, GiElectric } from "react-icons/gi";
 import { SiHiveBlockchain } from "react-icons/si";
 
 const iconsDirectory = {
@@ -8,6 +8,7 @@ const iconsDirectory = {
   blockchain: <SiHiveBlockchain />,
   AI: <GiBrain />,
   personal: <FaEarlybirds />,
+  energy: <GiElectric />,
 };
 
 export default iconsDirectory;
