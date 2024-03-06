@@ -18,6 +18,11 @@ img#solarModule {
   width: 300px;
 }
 
+img#methaneSatMap {
+  margin: 0px 0px 0px 5px;
+  width: 300px;
+}
+
 /* react-icon styles */
 
 .thumbnail#kiwiBird {
