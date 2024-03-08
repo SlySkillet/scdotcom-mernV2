@@ -23,6 +23,10 @@ img#methaneSatMap {
   width: 300px;
 }
 
+img#pwaIcon {
+  width: 300px;
+}
+
 /* react-icon styles */
 
 .thumbnail#kiwiBird {
