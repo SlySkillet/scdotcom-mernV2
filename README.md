@@ -1,6 +1,6 @@
 # scdotcom-mernV2
 
-This is the second iteration of my portfolio site. This is a platform I am creating to document my learning and research.
+This is the second iteration of my portfolio site. I wanted to learn to build a webserver and host my portfolio site there instead of using vercel. I felt it was an important step in my learning journey to create and deploy a full stack application using digital ocean. In this version, I've created a blog to share my research in the tech industry. I inted for this site to be a living document of my progress in writing code.
 
 My goals for this iteration were:
 
