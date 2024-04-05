@@ -23,6 +23,8 @@ const imagesDirectory = {
     "https://res.cloudinary.com/ddgt67wcb/image/upload/c_scale,w_300/v1709836683/pwa-icon_thdtr3.png",
   ioverlander_screenshot:
     "https://res.cloudinary.com/ddgt67wcb/image/upload/v1712344472/Screenshot_2024-04-05_at_3.13.26_PM_kd19cd.png",
+  waking_up:
+    "https://res.cloudinary.com/ddgt67wcb/image/upload/c_scale,w_250/v1712349510/waking-up-logo-1024x1024-1511251785_sixybd.jpg",
 };
 
 export default imagesDirectory;

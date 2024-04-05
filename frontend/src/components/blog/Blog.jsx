@@ -92,7 +92,9 @@ const Blog = function () {
       <div className="blog header">
         <p className="blog title"> Blog </p>
         <p className="blog subtext">
-          come here for your daily dose of the goods
+          Come here to learn more about my research, studies, projects, and
+          stuff I find interesting. I share and discuss podcasts, news articles,
+          cool ideas and discoveries.
         </p>
       </div>
       <div className="main-container">
