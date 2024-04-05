@@ -21,6 +21,8 @@ const imagesDirectory = {
     "https://res.cloudinary.com/ddgt67wcb/image/upload/v1709746659/Sample_MethaneSAT_Data___Credit_Google_Earth_Engine_rrcdn4.webp",
   pwa_icon:
     "https://res.cloudinary.com/ddgt67wcb/image/upload/c_scale,w_300/v1709836683/pwa-icon_thdtr3.png",
+  ioverlander_screenshot:
+    "https://res.cloudinary.com/ddgt67wcb/image/upload/v1712344472/Screenshot_2024-04-05_at_3.13.26_PM_kd19cd.png",
 };
 
 export default imagesDirectory;
