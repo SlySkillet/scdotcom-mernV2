@@ -6,3 +6,8 @@ i.icon {
   margin: 2px 0px 0px 2px;
   font-size: 22px;
 }
+
+.icon#mobile {
+  font-size: 22px;
+  transform: rotate(10deg);
+}
